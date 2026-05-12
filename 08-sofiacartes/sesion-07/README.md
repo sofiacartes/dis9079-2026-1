@@ -11,20 +11,21 @@ Integrantes:
 - Valentina Ruz
 - Sofía Cartes
 
-Materiales a utiizar: 
+## Apuntes
+
+Aarón y Mati están haciendo un libro sobre todos los conocimientos que pasan el ramo de taller de Máquinas Electrónicas.
+
+Materiales a utiizar en clases: 
 
 - Protoboard tiene dos emiferios, son sectores independientes tiene vcc y gnd para guiarnos 
 - servomotor tiene 3 terminales vcc, señal (amarilla) posición a dónde va.
 - LDR (sensor) pasa por todos los valores intermedios 
-- Potenciómetro tiene 3 patitas, la 1 y la 2 o la 2 y la 3 se conectará, así detectaremos nuestro giro.
+- Potenciómetro tiene 3 patitas, la 1 y la 2 o la 2 y la 3 se conectará, así detectaremos nuestro giro
+-  Cables 
 
-entre mas voltaje utilizamos, 
+**veremos datos, estrategias para mandarle a la nube**
 
-rasberrypi ocupa 3.3 de voltaje
-
-veremos datos, estrategias para mandarle a la nube
-
-## Tinkercad 
+### Tinkercad 
 
 Ejemplo visto en clases: <https://www.tinkercad.com/things/8DYKKECMAMm/editel?returnTo=%2Fdashboard>
 
@@ -214,3 +215,57 @@ void loop() {
   delay(15);
 }
 ```
+
+### ¿Cómo pasar este dato a la nube?
+
+Al momento de tener el código en el arduino debemos cambiar la línea 13
+
+```cpp
+#define AIO_FEED     AIO_USERNAME “/blabalbla
+```
+
+No cambiar el usuario ni la clave del profe ya que funciona como receptor
+
+cambiar de 500 a 5000 (línea 15)
+
+```cpp
+#define INTERVALO_PUBLISH 500
+```
+
+### Cómo cambiar el potencíometro por el sensor LDR
+
+Potenciómetro: tiene tres pines: corriente, señal y tierra).
+LDR: resistencia que varía.
+
+
+#### Pasos a seguir:
+
+Para sustituir el potenciómetro, conecta los componentes de la siguiente manera:
+
+- 5V de Arduino va a un pin de la LDR.
+
+- El otro pin de la LDR va al pin analógico (por ejemplo, A0).
+
+- Desde ese mismo pin A0, conectas una resistencia de 10kΩ que vaya a GND (tierra).
+
+Una patita a 5V y la otra desde ground a una resistencia de 10K, y desde la otra patita de la resistencia la conexión al pin A y a la otra patita del LDR
+
+## Registro
+
+<img src="./imagenes/imagen1.jpg" alt="install" width="300">
+
+<img src="./imagenes/imagen2.jpg" alt="install" width="300">
+
+<img src="./imagenes/imagen3.jpg" alt="install" width="300">
+
+<img src="./imagenes/imagen4.jpg" alt="install" width="300">
+
+<img src="./imagenes/imagen5.jpg" alt="install" width="300">
+
+<img src="./imagenes/imagen6.jpg" alt="install" width="300">
+
+<img src="./imagenes/ejemploLecturaPoteYservo.jpg" alt="install" width="600">
+
+<img src="./imagenes/video1.gif" alt="install" width="300">
+
+<img src="./imagenes/video2.gif" alt="install" width="300">
