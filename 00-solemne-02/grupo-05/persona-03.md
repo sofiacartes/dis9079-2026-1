@@ -2,6 +2,28 @@
 
 Nicolás Elías Valdés Greve / [nicolasvaldesgreve](<https://github.com/nicolasvaldesgreve/dis9079-2026-1/tree/main/29-nicolasvaldesgreve>)
 
+## Sensor LDR
+
+El sensor LDR (Light Dependent Resistor) o también llamado fotorresistencia, como lo dice su nombre, es un resistor el cual dependiendo de la intensidad de la luz va a ir cambiando su valor de resistencia, todo ésto es gracias a que está fabricado con un material semiconductor de sulfuro de cadmio (CdS), el cual le permite reaccionar a la luz visible ya que cuando caen los fotones sobre el LDR los electrones de la banda de valencia del material semiconductor son trasladados a la banda de conducción. Los cambios en el valor de su resistencia varían de la siguiente manera:
+
++ Mientras más iluminación haya, la resistencia disminuye.
++ Mientras menos iluminación haya, la resistencia aumenta.
+
+Dentro de un esquemático el símbolo del LDR es el mismo que el de una resistencia, pero éste tiene dos flechas que caen sobre él para demostrar el cómo entra la luz.
+
+![Simbología de LDR en esquemáticos](./imagenes/simbolo-ldr.png)
+
+
+
+uso del sensor
+filtrado de información
+visualización de datos
+problemas comunes
+
++ <https://www.mechatronicstore.cl/sensor-de-deteccion-de-luz-fotosensible-digital/?srsltid=AfmBOooyaVFpS7vgsjQ7xQU6gjCxzt0Uxd_LYXZL8HfRX2tP1_rhH5VT>
++ <https://tecnosalva.com/que-es-y-como-funciona-una-ldr/>
++ 
+
 ## Sonitus Lucis - Arturo Yelo
 
 > Ninguna de las imagenes presentadas en esta investigación me pertenecen, todas fueron rescatadas de la página del Museo Cristóbal Gabarrón en donde se muestra toda la documentación de la exposición de la obra.
