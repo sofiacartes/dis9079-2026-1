@@ -1,35 +1,25 @@
 # sesion-08
 
-Veremos ctuadores
+En esta sesión veremos actuadores
 
-Mu editor RIP
+Mu editor sigue funcionando pero no le hacen mantención así que no lo usaremos (RIP)
 
-Python: Lenguaje muy fácil de escribir
+Python: Lenguaje muy fácil de escribir por que se escribe menos pero es muy estricto, hay que tner mucho ojo con los espacios por esto puede ser poco eficiente. 
 
-Se escribe menos pero muy estricto, hay que tner mucho ojo con los espacios 
-
-Poco eficiente
+##### Algunas de las librerías de python:
 
 ![librerias python](./imagenes/libreriaspyton.png)
 
+Se usaba micropython pero vamos a usar Circuit Python.
 
-se usaba micropython
-
-vamos a usar circuit python 
-
-tenemos que eliminar el filmware de la raspi
-
-Descargar CircuitPython 10.2.0 e insertarlo al disco duro de la raspi
+1. tenemos que eliminar el filmware de la raspi
+2. Descargar CircuitPython 10.2.0
+3. Insertar el archivo descargado al disco duro de la raspi
+4. Descargar la última versión de PuTTY
+5. En PuTTY, conexión a serial, cambiar el port a 115200 y el host name al com en donde se encuentra nuestra raspberry pi pico 2 w
+6. Hacer ctrl + c Sino funciona lo anterior hacer ctrl + d.
 
 <https://learn.adafruit.com/welcome-to-circuitpython/advanced-serial-console-on-windows>
-
-Descargar la última versión de PuTTY 
-
-En PuTTY, conexión a serial, cambiar el port a 115200 y el host name al com en donde se encuentra nuestra raspberry pi pico 2 w 
-
-Hacer ctrl + c 
-
-Sino funciona lo anterior hacer ctrl + d.
 
 usar arduino para mover el servo
 
