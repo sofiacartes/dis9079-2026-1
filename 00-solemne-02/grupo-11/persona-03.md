@@ -1,6 +1,6 @@
 # investigaciones individuales
 
-nombre completo / github
+catalina salinas / catasal
 
 ## Sensor
 
