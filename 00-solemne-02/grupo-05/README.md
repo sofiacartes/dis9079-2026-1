@@ -66,30 +66,25 @@ import socketpool
 import adafruit_minimqtt.adafruit_minimqtt as MQTT
 
 # WiFi
-SSID = "iPhone de Renata"
-PASSWORD = "arevalo12345"
+SSID = "si"
+PASSWORD = "mailo6192."
 
 print("Conectando WiFi...")
-
 wifi.radio.connect(
     SSID,
     PASSWORD
 )
-
 print("WiFi conectado")
 
 # MQTT
 pool = socketpool.SocketPool(wifi.radio)
-
 mqtt = MQTT.MQTT(
     broker="io.adafruit.com",
     username="udpmontoyamoraga",
     password="keydeaarón",
     socket_pool=pool
 )
-
 mqtt.connect()
-
 print("MQTT conectado")
 
 # Potenciómetro A0
@@ -98,37 +93,35 @@ pot = analogio.AnalogIn(board.A0)
 # Botón GP0
 button = digitalio.DigitalInOut(board.GP0)
 button.direction = digitalio.Direction.INPUT
-
-# Pull UP interno
 button.pull = digitalio.Pull.UP
+
+# LED GP1
+led = digitalio.DigitalInOut(board.GP1)
+led.direction = digitalio.Direction.OUTPUT
 
 ultimo_valor = -1
 
 while True:
-
     # Con PULL_UP:
     # False = presionado
     # True = suelto
-
     if not button.value:
+        # Encender LED al presionar
+        led.value = True
 
         valor = pot.value * 1023 // 65535
-
         # Evita enviar repetidos innecesarios
         if abs(valor - ultimo_valor) > 5:
-
             print("Enviando:", valor)
-
             mqtt.publish(
                 "udpmontoyamoraga/feeds/potenciometro-05",
                 str(valor)
             )
-
             ultimo_valor = valor
-
         time.sleep(0.2)
-
     else:
+        # Apagar LED al soltar
+        led.value = False
         time.sleep(0.01)
 ```
 
@@ -141,17 +134,19 @@ while True:
 #include "Adafruit_MQTT_Client.h"
 
 // WiFi
-#define WLAN_SSID "iPhone de Renata"
-#define WLAN_PASS "arevalo12345"
+#define WLAN_SSID "si"
+#define WLAN_PASS "mailo6192."
 
 // Adafruit IO
-#define AIO_SERVER "io.adafruit.com"
+#define AIO_SERVER     "io.adafruit.com"
 #define AIO_SERVERPORT 1883
-#define AIO_USERNAME "udpmontoyamoraga"
-#define AIO_KEY "keydeaarón"
+#define AIO_USERNAME   "udpmontoyamoraga"
+#define AIO_KEY        "keydeaarón"
+
+// Pin LED
+#define LED_PIN 13
 
 WiFiClient client;
-
 Adafruit_MQTT_Client mqtt(
   &client,
   AIO_SERVER,
@@ -168,29 +163,22 @@ Adafruit_MQTT_Subscribe(
 );
 
 Servo miServo;
-
 void MQTT_connect();
 
 void setup() {
-
   Serial.begin(115200);
-
   miServo.attach(9);
 
+  // LED como salida
+  pinMode(LED_PIN, OUTPUT);
+  digitalWrite(LED_PIN, LOW);
+
   Serial.println("Conectando WiFi");
-
-  WiFi.begin(
-    WLAN_SSID,
-    WLAN_PASS
-  );
-
+  WiFi.begin(WLAN_SSID, WLAN_PASS);
   while (WiFi.status() != WL_CONNECTED) {
-
     Serial.print(".");
     delay(500);
-
   }
-
   Serial.println();
   Serial.println("WiFi conectado");
 
@@ -198,67 +186,44 @@ void setup() {
 }
 
 void loop() {
-
   MQTT_connect();
 
   Adafruit_MQTT_Subscribe *subscription;
-
   while ((subscription = mqtt.readSubscription(1000))) {
-
     if (subscription == &potenciometro) {
-
       int valorPot = atoi(
         (char*)potenciometro.lastread
       );
-
       Serial.print("Recibido: ");
       Serial.println(valorPot);
 
-      // Convertir 0-1023 a 0-180°
-      int angulo = map(
-        valorPot,
-        0,
-        1023,
-        0,
-        180
-      );
+      // Encender LED al recibir mensaje
+      digitalWrite(LED_PIN, HIGH);
+      delay(200);
+      digitalWrite(LED_PIN, LOW);
 
-      angulo = constrain(
-        angulo,
-        0,
-        180
-      );
+      // Convertir 0-1023 a 0-180°
+      int angulo = map(valorPot, 0, 1023, 0, 180);
+      angulo = constrain(angulo, 0, 180);
 
       Serial.print("Ángulo: ");
       Serial.println(angulo);
-
       miServo.write(angulo);
     }
   }
 }
 
 void MQTT_connect() {
-
   int8_t ret;
-
   if (mqtt.connected()) {
     return;
   }
-
   Serial.print("Conectando MQTT...");
-
   while ((ret = mqtt.connect()) != 0) {
-
-    Serial.println(
-      mqtt.connectErrorString(ret)
-    );
-
+    Serial.println(mqtt.connectErrorString(ret));
     mqtt.disconnect();
-
     delay(5000);
-
   }
-
   Serial.println(" conectado");
 }
 ```
