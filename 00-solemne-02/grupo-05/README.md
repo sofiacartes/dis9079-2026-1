@@ -8,6 +8,33 @@
 
 ## Descripción textual del proyecto
 
+Como proyecto para la segunda solemne del curso se nos indicó el, al igual que la vez pasada, lograr una comunicación inalámbrica utilizando códigos en dos microcontroladores los cuales serán una placa Arduino R4 WiFI y una Raspberry Pi Pico 2 W. En nuestro caso, se utilizará la Raspberry Pi Pico 2 W para poder enviar información hacia el Arduino UNO R4 WiFi, lo cual se hará de la siguiente manera:
+
+#### Raspberry Pi Pico 2 W
+
+En éste microcontrolador estarán conectados los siguientes componentes:
+
+1. Potenciómetro B20K
+2. Push button 4 pins
+3. Diodo LED
+4. Resistencia 220 Ω
+
+El potenciómetro estará conectado de la siguiente manera: el pin izquierdo del potenciómetro estará conectado al pin 13 ``GND`` de la Raspberry, el pin de en medio está conectado al pin 36 ``3V3 (out)``, y el pin derecho está conectado al pin 31 ``ADC0``.
+
+El push button está conectado al pin 28 ``GND`` de la Raspberry y al pin 1 ``GP0``.
+
+El LED está conectado mediante una resistencia de 220 Ω al pin 2 ``GP1``, el cual llega al pin positivo del LED. El pin negativo del LED va conectado al pin 18 ``GND``.
+
+#### Arduino UNO R4 WiFi
+
+En éste microcontrolador solo va conectado el Micro Servo Motor SG90 9g, el cual se conecta de la siguiente manera: El cable de color rojo va al pin ``5V`` el cual está ubicado en la sección ``POWER`` del Arduino, el cable de color café va en el pin ``GND`` que está ubicado en la sección ``POWER`` o ``DIGITAL`` y el cable de color amarillo va conectado en el pin ``9~`` ubicado en la sección ``DIGITAL`` de la placa.
+
+---
+
+Una vez tengamos todos los componentes conectados a sus respectivos microcontroladores, podremos empezar a comunicarnos entre ellos utilizando los códigos que se mencionan más abajo. La manera en la que funciona ésto es que, cuando mantenemos presionado el push button que está ubicado en la Raspberry, se empezarán a enviar los datos numéricos que podemos modificar moviendo el potenciómetro, el cual dependiendo del valor que se envíe el Motor Servo se moverá. Mientras todo ésto sucede, el LED nos indicará cuándo estamos manteniendo presionado el push button, ya que cuando lo presionamos se encenderá la luz, y cuando no estemos ejerciendo ninguna presión, se mantendrá apagado.
+
+Todos los datos del potenciómetro se pueden visualizar en tiempo real en este link:
+
 <https://io.adafruit.com/udpmontoyamoraga/feeds/potenciometro-05>
 
 ## Materiales usados
@@ -21,6 +48,7 @@
 | Cables Dupont (Pack 40 unidades) | $2.590 | 1 | <https://mcielectronics.cl/shop/product/cable-dupont-macho-macho-20cm-pack-40-unidades/> |
 | Micro Servo Motor SG90 9g | $3.290 | 1 | <https://arduino.cl/producto/micro-servo-motor-sg90-9g/?srsltid=AfmBOoqZlsZtwx6MP23bWquVf5u5zZnS9a5CEJFEFpIcFrlUZCnyhxc5> |
 | Botón Pulsador 4 pines | $570 | 1 | <https://www.victronics.cl/interruptores/boton-pcb-4-pines-spst-negro-redondo/> |
+| Diodo LED | | $70 | 1 | <https://afel.cl/products/diodo-led-5mm-ultrabrillante-azul?pr_prod_strat=jac&pr_rec_id=1cd69e264&pr_rec_pid=8382019502232&pr_ref_pid=8382019600536&pr_seq=uniform> |
 
 ## Sensor usado
 
