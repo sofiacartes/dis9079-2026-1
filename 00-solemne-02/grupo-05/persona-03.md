@@ -76,7 +76,11 @@ Esta obra fue inspirada en el pensamiento de Martin Heidegger (1889 - 1976) sobr
 
 ### PCD8544 LCD
 
+![PCD8544 por delante](./imagenes/PCD8544-frente.jpg)
+
 El chip PCD8544 es un controlador que se considera un actuador visual, ya que el actuador es el que transforma una señal en información visual. Éste chip utiliza una interfaz de bus serie similar a SPI (Interfaz Periférica Serie) lo cual le permite comunicarse con microcontroladores y está diseñado para poder operar una pantalla gráfica de 84 x 84 píxeles.
+
+![PCD8544 por detrás](./imagenes/PCD8544.jpg)
 
 Éste chip funciona dentro del rango de 2,7V a 3,3V, y sus niveles de comunicación son de 3V por lo que si lo quieres conectar a un microcontrolador como Arduino (wow justo con lo que estamos trabajando) que funciona con 5V, se necesita un tipo de adaptación ya que se puede dañar fácilmente la pantalla, pero no hay problema al utilizarlo con una Raspberry que funciona con 3V3 (wow también trabajamos con ésta, que loco).
 
