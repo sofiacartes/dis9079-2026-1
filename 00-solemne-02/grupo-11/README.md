@@ -19,30 +19,7 @@ No necesitás resistencia externa porque el código usa Pin.PULL_UP, que activa 
 
 <img width="487" height="460" alt="boton" src="https://github.com/user-attachments/assets/27a12dc5-1013-4e0c-a581-41366887edde" />
 
-
-        USB
-    ┌────┤├────┐
- GP0│  1    40 │VBUS
- GP1│  2    39 │VSYS
- GND│  3    38 │GND   ← podés usar este GND
- GP2│  4    37 │3V3_EN
- GP3│  5    36 │3V3
- GP4│  6    35 │ADC_VREF
- GP5│  7    34 │GP28
- GND│  8    33 │GND
- GP6│  9    32 │GP27
- GP7│ 10    31 │GP26
- GP8│ 11    30 │RUN
- GP9│ 12    29 │GP22
- GND│ 13    28 │GND
-GP10│ 14    27 │GP21
-GP11│ 15    26 │GP20
-GP12│ 16    25 │GP19
-GP13│ 17    24 │GP18
- GND│ 18    23 │GND
-GP14│ 19    22 │GP17
-GP15│ 20    21 │GP16  ← GP15 está acá
-    └──────────┘
+<img width="504" height="579" alt="pico2w" src="https://github.com/user-attachments/assets/7bf40e4d-8da1-4b7d-9845-838e607ed848" />
 
 <img width="880" height="463" alt="inalambrico" src="https://github.com/user-attachments/assets/881f277e-f0f4-46e5-ac69-5ec51a5124f7" />
 
