@@ -53,13 +53,13 @@ durante la clase se probo con enviar datos al adafruit
 ## Imágenes del proyecto
 <img width="900" height="1600" alt="WhatsApp Image 2026-05-21 at 19 02 01" src="https://github.com/user-attachments/assets/fc3011c3-77e6-49eb-8ea7-3f1cd5e51e51" />
 
-https://github.com/user-attachments/assets/a0d115bc-8573-45b9-bbcb-b2d1fac5d7e9 
-
-https://github.com/user-attachments/assets/ff885a3a-38ae-4f76-9ec6-ffaf2f524898
-
 <img width="807" height="642" alt="luz led" src="https://github.com/user-attachments/assets/79fb90f6-19b8-4cad-97b7-6ded2a79117a" />
 
 ## Animaciones del proyecto
+
+https://github.com/user-attachments/assets/a0d115bc-8573-45b9-bbcb-b2d1fac5d7e9 
+
+https://github.com/user-attachments/assets/ff885a3a-38ae-4f76-9ec6-ffaf2f524898
 
 ## Bibliografía
 chat gpt
