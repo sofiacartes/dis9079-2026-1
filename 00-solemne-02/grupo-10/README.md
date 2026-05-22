@@ -324,9 +324,13 @@ while True:
 
 - "estado_actual = boton.value" muestra el valor del botón y lee si es que el botón está presionado o no, en este caso, true --> botón en reposo (no presionado) y false --> botón presionado
 
-- cuando se de la condición "if estado_anterior and not estado_actual:" significa que el estado anterior es distinto del estado actual del botón, por ende, detecta que alguien SÍ presionó el botón
+- Cuando se de la condición "if estado_anterior and not estado_actual:" significa que el estado anterior es distinto del estado actual del botón, por ende, detecta que alguien SÍ presionó el botón
 
-- cuando estado_anterior = estado_actual, significa que no está presionado el botón porque ambos estados son iguales, por lo que no pasa nada, el botón únicamente activa la lectura cuando el estado actual es distinto del estado anterior
+- Cuando estado_anterior = estado_actual, significa que no está presionado el botón porque ambos estados son iguales, por lo que no pasa nada, el botón únicamente activa la lectura cuando el estado actual es distinto del estado anterior
+
+**Agregamos una nueva parte al código para poder solucionar el error en el que sólo se enviaba "1" hacia Adafruit IO**
+
+- La línea "if not estado_anterior and estado_actual:" hace lo opuesto a "if estado_anterior and not estado_actual:" , es decir, si anteriormente el botón estaba presionado (false) y ahora ya no lo está (true) entonces significa que alguien soltó el botón, por lo tanto envía 0 a Adafruit
 
 - 
 
@@ -348,9 +352,15 @@ Otro error al momento de iniciar vscode era el modo restringido
 
 Esto aparecía cada vez que abríamos vscode en un computador, debemos apretar trust para poder seguir adelante. Lo que hacía este error era que de alguna manera restringe a Python y este no puede operar con normalidad, es como si lo "reprimiera". No encontramos la forma de evitar que se abriera esta ventana cada vez que abríamos vscode por lo que siempre teníamos que apretar "trust" para continuar.
 
-Uno de los errores más importantes fue el hecho de que el LED se quedaba encendido tras presionar el botón reiteradas veces. Esto ocurría porque el código en un inicio (lunes) al enviar datos a adafruit, sólo enviaba el valor 1, esto hacía que el LED detectara sólo la opción de encenderse después de cierto rato, era una especie de bug.
+Uno de los errores más importantes fue el hecho de que el LED se quedaba encendido tras presionar el botón reiteradas veces. Esto ocurría porque el código en un inicio (lunes) al enviar datos a adafruit, sólo enviaba el valor 1, esto hacía que el LED detectara sólo la opción de encenderse, entonces después de cierto rato presionando el botón repetidamente se bugeaba y dejaba de funcionar correctamente.
 
 Este error se solucionó al agregar esta parte extra al código, la cuál hace que al soltar el botón se envíe un 0, indicando que el led se debe apagar
+
+![errorsolucion3](./imagenes/codigoBoton2.JPG)
+
+![errorsolucion4](./imagenes/0y1Raspi.JPG)
+
+De esta manera ahora en los feeds aparecía que se enviaban 0 y 1 respectivamente, lo cuál hace que el led se encienda y se apague sin bugearse, independiente de la cantidad de veces que presionemos el botón.
 
 
 
