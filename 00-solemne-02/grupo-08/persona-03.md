@@ -33,6 +33,8 @@ La plataforma Adafruit IO funcionará como intermediario de comunicación entre 
 
 Los datos enviados desde la Raspberry Pi Pico 2 W serán publicados en el feed “moluscos”, quedando disponibles en tiempo real para ser leídos posteriormente por el Arduino UNO R4 WiFi.
 
+Para Adafruit se visualiza desde el feed moluscos: <https://io.adafruit.com/vxlentiinaa/feeds/moluscos>
+
 ### Arduino IDE
 
 El Arduino UNO R4 WiFi se conectará a Adafruit IO para recibir los datos publicados en el feed “moluscos”.
