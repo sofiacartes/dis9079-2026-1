@@ -2,7 +2,7 @@
 
 Angel David Sabogal Hernandez / angel-udp
 
-En el traspaso de información es importante mirar cada detalle que puede hacer que no funcione y en este caso puede pasar que a pesar de tener bien el código que se sube a la nube, si los jumpers no están bien conectados a cada uno de los pines que deben ir, podemos recaer en el fallo de pensar que es alguna parte del código o cualquier otra cosa, lo anoto como fallo de proceso porque a pesar de que llevamos un tiempo esto puede seguir pasando hasta cuando se tiene bastante experiencia.
+En el traspaso de información es importante mirar cada detalle que puede hacer que no funcione y en este caso puede pasar que a pesar de tener bien el código que se sube a la nube, si los jumpers no están bien conectados a cada uno de los pines que deben ir en la Raspberry Pi Pico 2 W, podemos recaer en el fallo de pensar que es alguna parte del código o cualquier otra cosa, lo anoto como fallo de proceso porque a pesar de que llevamos un tiempo esto puede seguir pasando hasta cuando se tiene bastante experiencia.
 
 Para la Pantalla OLED 128x84 px se debe implementar la app PuTTY que es la que hace que el código del dibujo digital y la figura que muestra en qué parte de los 180° se encuentra el movimiento de la perilla (parte izquierda).
 
