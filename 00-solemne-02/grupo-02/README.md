@@ -172,7 +172,7 @@ Además, observamos que la visualización del proyecto en Visual Studio Code apa
 // CREDENCIALES
 // ==========================================
 #define IO_USERNAME  "udpmontoyamoraga"
-#define IO_KEY       
+#define IO_KEY       "clavecredencial"
 #define WIFI_SSID    "marce"
 #define WIFI_PASS    "marce1234"
 
