@@ -53,6 +53,14 @@ Es el monitor del proyecto, utilizada para mostrar la información recibida del 
 
 ## Imágenes del proyecto
 
+![proceso](./imagenes/proceso.jpeg)
+
 ## Animaciones del proyecto
+
+![Proceso 1](./imagenes/ejemplo1.gif)
+![Proceso 2](./imagenes/ejemplo2.gif)
+![Proceso 3](./imagenes/ejemplo3.gif)
+![Proceso 4](./imagenes/ejemplo4.gif)
+![Proceso 5](./imagenes/ejemplo5.gif)
 
 ## Bibliografía
