@@ -34,8 +34,6 @@ Sin el filtrado correcto, la plataforma muestra múltiples picos de información
 
 ## 3. Problemas comunes
 
-![Protoboard y botón](https://upload.wikimedia.org/wikipedia/commons/8/8f/Breadboard.jpg)
-
 ### Saturación del servidor
 Si el sistema envía constantemente el estado del botón en cada ciclo del programa, Adafruit IO puede saturarse con datos repetidos. Por esta razón, lo correcto es enviar información solo cuando el estado cambia.
 
@@ -104,6 +102,7 @@ Utilizar una resistencia demasiado baja puede provocar sobrecorriente, dañando 
 ---
 
 ## 4. Referente: The Bay Lights — Leo Villareal
+![Referente](imagenes/referente_2jfif)
 
 “The Bay Lights” es una instalación artística creada por Leo Villareal que utilizó miles de LEDs distribuidos en el puente Bay Bridge de San Francisco para generar patrones lumínicos dinámicos mediante programación.
 
