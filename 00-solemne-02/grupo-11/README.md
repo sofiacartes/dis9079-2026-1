@@ -56,14 +56,13 @@ durante la clase se probo con enviar datos al adafruit
 <img width="807" height="642" alt="luz led" src="https://github.com/user-attachments/assets/79fb90f6-19b8-4cad-97b7-6ded2a79117a" />
 
 ## Animaciones del proyecto
-
+al principo probamos sin colocar un cable puente en la entrada 13
 https://github.com/user-attachments/assets/a0d115bc-8573-45b9-bbcb-b2d1fac5d7e9 
 
 https://github.com/user-attachments/assets/ff885a3a-38ae-4f76-9ec6-ffaf2f524898
 
 ## Bibliografía
 chat gpt
-claude
-profesor aron 
+claude 
 mateo 
 compañeros 
