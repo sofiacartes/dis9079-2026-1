@@ -10,8 +10,6 @@ El sensor MQ-135 es un dispositivo electrónico utilizado para detectar diferent
 
 Al investigar este sensor llamó la atención que un componente tan pequeño sea capaz de detectar algo que normalmente las personas no pueden percibir directamente. Generalmente podemos notar humo o malos olores, pero la presencia de ciertos gases pasa desapercibida, y descubrir que eso puede convertirse en datos medibles resultó muy interesante.
 
-El MQ-135 funciona mediante un material sensible —óxido de estaño dopado con indio (In₂O₃-SnO₂)— que modifica su resistencia eléctrica cuando entra en contacto con diferentes gases presentes en el aire. Estos cambios generan señales eléctricas que pueden ser interpretadas por una placa como Arduino o Raspberry Pi Pico para posteriormente ser procesadas (Zevallos Reyna, 2024).
-
 El sensor puede entregar dos tipos de salida:
 
 - **Salida analógica:** entrega valores variables proporcionales a la concentración de gas detectada.
