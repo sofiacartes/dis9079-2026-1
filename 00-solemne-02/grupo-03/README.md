@@ -9,14 +9,17 @@
 ## Descripción textual del proyecto
 
 ## Materiales usados
-+ Raspberry pi pico 2w
-+ Arduino R4 Wifi
-+ Protoboard
-+ Cables dupont
-+ Botón - pulsador
-+ Pantalla OLED
-+ Cable USB-C
-+ Cable Micro USB
+
+| Material              | Descripción / Función                                                                 |
+|-----------------------|---------------------------------------------------------------------------------------|
+| Raspberry Pi Pico 2W  | Microcontrolador principal con conectividad Wi-Fi y Bluetooth; ejecuta la lógica del sistema |
+| Arduino R4 WiFi       | Placa de desarrollo con conectividad Wi-Fi integrada; permite comunicación inalámbrica y procesamiento adicional |
+| Protoboard            | Tablero de prototipado sin soldadura; permite conectar componentes de forma temporal y ordenada |
+| Cables Dupont         | Cables de conexión macho-macho, macho-hembra o hembra-hembra; utilizados para interconectar componentes en la protoboard |
+| Botón / Pulsador      | Componente de entrada digital; permite al usuario enviar señales al microcontrolador mediante presión |
+| Pantalla OLED         | Display de salida visual; muestra información del sistema como datos, estados o mensajes |
+| Cable USB-C           | Cable de alimentación y/o programación; utilizado para conectar el Arduino R4 al PC o fuente de energía |
+| Cable Micro USB       | Cable de alimentación y/o programación; utilizado para conectar la Raspberry Pi Pico al PC o fuente de energía |
 ## Sensor usado
 Para el sensor decidimos utilizar un boton - pulsador conectado a nuestra raspberry, permitiendonos enviar el mensaje a la nube con tan solo presionarlo, se presiona cuatro veces para proyectar los cuatro mensajes. 
 ## Actuador usado
