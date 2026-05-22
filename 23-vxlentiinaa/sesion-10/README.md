@@ -159,13 +159,19 @@ Muchos proyectos de Teenage Engineering utilizan potenciómetros como parte cent
 
 <img src="./imagenes/teenage.png" alt="teenage" width="300">
 
+---
+
 ### Investigación del actuador: Servomotor SG90
 
 `¿Qué es un actuador?`
 
-Un actuador es un componente capaz de transformar energía eléctrica en movimiento físico. Dentro de sistemas interactivos, los actuadores permiten que los datos digitales produzcan respuestas visibles o mecánicas en el mundo real. En este caso, utilizamos un actuador eléctrico es un dispositivo electromecánico que convierte la energía eléctrica en fuerza y movimiento mecánico. Utiliza un motor eléctrico (como corriente continua, motores paso a paso o servomotores) para generar un movimiento rotativo o lineal, permitiendo abrir, cerrar, posicionar o bloquear objetos. 
+Un actuador es un componente capaz de transformar energía eléctrica en movimiento físico. Dentro de sistemas interactivos, los actuadores permiten que los datos digitales produzcan respuestas visibles o mecánicas. En este caso, utilizamos un actuador eléctrico es un dispositivo electromecánico que convierte la energía eléctrica en fuerza y movimiento mecánico. Utiliza un motor eléctrico (como corriente continua, motores paso a paso o servomotores) para generar un movimiento rotativo o lineal, permitiendo abrir, cerrar, posicionar o bloquear objetos. 
 
 `¿Qué es el servomotor SG90?`
+
+Un servomotor es un actuador electromecánico diseñado para controlar con precisión la posición angular, velocidad y movimiento de un eje mediante un sistema de retroalimentación interna. A diferencia de un motor convencional, que gira de manera continua al recibir energía, el servomotor puede posicionarse en ángulos específicos y mantener esa posición de forma controlada.
+
+Los servomotores son ampliamente utilizados en robótica, automatización, diseño interactivo, prótesis, sistemas industriales, modelismo y dispositivos electrónicos debido a su capacidad de realizar movimientos precisos y repetibles.
 
 El SG90 es un micro servomotor controlado mediante señales PWM. Permite mover su eje hacia posiciones angulares específicas, generalmente entre 0° y 180°. Tiene un conector universal tipo “S” que encaja perfectamente en la mayoría de los receptores de radio control. Los cables en el conector están distribuidos de la siguiente forma:
 
@@ -174,12 +180,29 @@ El SG90 es un micro servomotor controlado mediante señales PWM. Permite mover s
 |Alimentación|Tierra|Señal|
 |(+)|(-)|PWM|
 
+**PWM**
+
+- Los servomotores funcionan principalmente mediante señales PWM.
+- La modulación por ancho de pulso consiste en enviar pulsos eléctricos repetitivos donde la duración del pulso determina el ángulo de posición del servo.
+- En la mayoría de los servomotores:
+  - un pulso cercano a 1 ms corresponde aproximadamente a 0°
+  - un pulso de 1.5 ms corresponde a 90°
+  - y un pulso de 2 ms corresponde a 180°
+
+Este sistema permite controlar el movimiento angular con alta precisión utilizando únicamente una señal digital desde plataformas como Arduino o Raspberry Pi.
+
 - Es uno de los actuadores más utilizados en proyectos de robótica, diseño interactivo y prototipado debido a:
   - Bajo costo
   - Tamaño compacto
   - Fácil programación
   - Compatibilidad con Arduino y Raspberry Pi
   - Funcionamiento dentro del proyecto
+ 
+**Componentes internos**
+
+- `Motor DC:` Es el componente encargado de generar el movimiento rotacional básico. Generalmente funciona a bajo voltaje y alta velocidad.
+- `Caja reductora de engranajes:` Los engranajes reducen la velocidad del motor y aumentan el torque, permitiendo movimientos más controlados y con mayor fuerza mecánica.
+- `Potenciómetro interno:` El servomotor incorpora un potenciómetro conectado al eje principal. Este sensor mide constantemente la posición angular del eje y entrega información al circuito de control.
 
 En este proyecto, el Arduino recibe los datos enviados desde Adafruit IO y los utiliza para controlar el ángulo del servomotor SG90. El servo mueve el corazón giratorio del robot LUMI dependiendo de la posición del potenciómetro. Además, cuando alcanza cierto ángulo, se activa un LED amarillo como respuesta visual.
 
@@ -227,6 +250,28 @@ El sistema es controlado mediante un microcontrolador Arduino, el cual envía se
 
 <img src="./imagenes/robotArana2.png" alt="robot" width="300">
 
+`Diseño`
+
+- La piezas del robot son:
+  - piezas acrílicas
+  - impresión 3D
+  - placas modulares livianas
+  - tornillos
+
+**Cabe recalcar que encontré varios modelos distintos de robot araña**
+
+### CÓDIGOOO
+
+
+
 ### Bibliografía
 
+Arduino.cl. (s.f.). Micro Servo Motor SG90 9g. Arduino.cl. <https://arduino.cl/producto/micro-servo-motor-sg90-9g>
+
 FSElectronics. (s.f.). Robot Araña 12 Dof Arduino + 12 Servo SG90. FSElectronics. <https://fselectronics.cl/products/robot-arana-12-dof-arduino-12-servo-sg90>
+
+Wikipedia contributors. (s.f.). Potenciómetro. En Wikipedia, la enciclopedia libre. Recuperado el 22 de mayo de 2026. <https://es.wikipedia.org/wiki/Potenci%C3%B3metro>
+
+Teenage Engineering. (s.f.). OP–1 field. Teenage Engineering. <https://teenage.engineering>
+
+
