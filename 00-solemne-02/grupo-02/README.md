@@ -49,6 +49,141 @@ Su función principal dentro del sistema es actuar como una “puerta de control
 El actuador utilizado en el proyecto fue una luz LED, empleada para representar visualmente la recepción de datos enviados desde la Raspberry Pi Pico 2W hacia el Arduino UNO R4 WiFi mediante Adafruit IO.
 
 Su función principal dentro del sistema es encenderse o apagarse dependiendo del estado del botón conectado a la Raspberry Pi Pico 2W, permitiendo demostrar la comunicación inalámbrica y el control remoto de actuadores en tiempo real mediante tecnologías IoT.
+## Actuador usado - Led
+
+**Paso 1: Validar el hardware primero:**
+Montamos el LED con su resistencia de **220Ω** en la protoboard. Primero hicimos una prueba de alimentación directa a 5V para confirmar que el LED encendía, y después una prueba de control con un código de parpadeo en el **pin 13**. Ver que el LED respondía bien fue la señal para avanzar a la parte inalámbrica con confianza.
+
+<p align="center">
+  <img width="515" height="600" alt="image" src="https://github.com/user-attachments/assets/3cc83dbb-cc79-4aae-9ffd-962d6fffddac" />
+</p>
+
+<p align="center">
+  <em>
+    Esta imagen muestra la conexión del positivo del LED al pin 5V del Arduino para corroborar el correcto encendido del LED.
+  </em>
+</p>
+
+<p align="center">
+  <img width="315" height="315" alt="image" src="https://github.com/user-attachments/assets/ed620dc2-e814-4bce-b9a1-3d4bfbaab040" />
+  <img width="315" height="315" alt="image" src="https://github.com/user-attachments/assets/8e4876e2-d6e3-4979-992b-0810f95a0df1" />
+  <img width="315" height="315" alt="image" src="https://github.com/user-attachments/assets/5771b7a4-2d57-4942-b04b-82de08ae5800" />
+</p>
+
+<p align="center">
+  <em>
+    Estas imágenes muestran el proceso de conexión del LED al pin de la placa.
+  </em>
+</p>
+
+### Código utilizado para la prueba de encendido y apagado en el pin 13 reflejándolo en un led
+```cpp
+void setup() {
+
+  Serial.begin(115200);
+
+  pinMode(13, OUTPUT);
+}
+
+void loop() {
+
+  digitalWrite(13, HIGH);
+
+  Serial.println("LED ENCENDIDO");
+
+  delay(500);
+
+  digitalWrite(13, LOW);
+
+  Serial.println("LED APAGADO");
+
+  delay(500);
+}
+```
+<div align="center"> <video src="https://github.com/user-attachments/assets/24d8ffe0-9134-476e-ae22-cc474dfec71e" width="315" autoplay loop muted playsinline></video> <p><em>Este GIF muestra la prueba realizada en el pin 13, enviando un código de encendido y apagado para corroborar tanto el correcto funcionamiento de la conexión del LED como la recepción del código enviado desde Arduino al pin 13.</em></p> </div> 
+
+## Código usado para recibir - Arduino Uno R4 WiFi
+```cpp
+#include "AdafruitIO_WiFi.h"
+
+#define IO_USERNAME "TU_USUARIO"
+#define IO_KEY "TU_KEY"
+
+#define WIFI_SSID "TU_WIFI"
+#define WIFI_PASS "TU_PASSWORD"
+
+AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
+
+const int ledPin = 13;
+
+AdafruitIO_Feed *botonFeed = io.feed("boton-prueba-grupo10");
+
+void setup() {
+
+  pinMode(ledPin, OUTPUT);
+
+  Serial.begin(115200);
+
+  Serial.print("Conectando a Adafruit IO...");
+
+  io.connect();
+
+  botonFeed->onMessage(handleMessage);
+
+  while(io.status() < AIO_CONNECTED) {
+
+    delay(500);
+    Serial.print(".");
+  }
+
+  Serial.println();
+  Serial.println("¡Arduino Conectado!");
+}
+
+void loop() {
+
+  io.run();
+}
+
+void handleMessage(AdafruitIO_Data *data) {
+
+  int comando = data->toInt();
+
+  if (comando == 1) {
+
+    digitalWrite(ledPin, HIGH);
+
+    Serial.println("LED ON");
+  }
+
+  else {
+
+    digitalWrite(ledPin, LOW);
+
+    Serial.println("LED OFF");
+  }
+}
+```
+
+
+## Materiales usados
+
+| Cantidad | Componente / Recurso | Función en esta Etapa |
+| --- | --- | --- |
+| 1 | Arduino UNO R4 WiFi | Placa para recibir mensajes. |
+| 1 | Raspberry Pi Pico 2w | Placa para enviar mensajes
+| 1 | Cable USB-C | Conexión física para cargar el código desde el PC en Arduino. |
+| 1 | Cable USB-A Micro USB | Conexión física para cargar el código desde PC a Raspberry Pi Pico 2. |
+| 1 | Arduino IDE (Software) | Instalado en el PC para programar la placa Arduino. |
+| 1 | Visual Studio Code (Software) | Instalado en el PC para programar en Python hacia Raspberry. |
+| 1 | Cuenta Adafruit IO | Registro en la plataforma para recibir los primeros datos. |
+| 1 | Hotspot Móvil / WiFi | Red de 2.4 GHz necesaria para la salida a internet. |
+| 1 | LED 5 MM | Encenderse y apagarse en base al pulso del botón. | 
+| 2 | Protoboard pequeña | sirve para conectar placas, LED, resistencia y botón. |
+| 1 | Resistencia 220K | Limitar la corriente que entra al LED. |
+| 1 | Push Button 4 pines | Envía mensaje a través de una pulsación. |
+| 4 | Cables Dupont | Encargados de establecer las conexiones de Hardware. |
+
 ## Código usado para enviar
 ```
 import time
