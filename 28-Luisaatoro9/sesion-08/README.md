@@ -128,7 +128,7 @@ while True:
 
 <img width="555" height="238" alt="image" src="https://github.com/user-attachments/assets/52bbf32d-0712-437e-aa7a-802a3347f085" />
 
-### 📂 La arquitectura de carpetas (El secreto del éxito)
+### 📂 La arquitectura de carpetas 
 
 No basta con tirar el código a la placa, la Raspberry Pi Pico es súper ordenada y necesita que los archivos estén en su lugar para no "marearse". Aprendí que la estructura interna debe ser así:
 
