@@ -223,7 +223,10 @@ El Robot Araña 12 DOF es un robot inspirado en el movimiento de las arañas, di
 
 El sistema es controlado mediante un microcontrolador Arduino, el cual envía señales PWM a los servomotores SG90 para coordinar el desplazamiento del robot.
 
-<img src="./imagenes/robotArana" alt="robot" width="300">
+<img src="./imagenes/robotArana1.png" alt="robot" width="300">
 
-https://zbotic.in/quadruped-spider-robot-12-servo-arduino/
+<img src="./imagenes/robotArana2.png" alt="robot" width="300">
 
+### Bibliografía
+
+FSElectronics. (s.f.). Robot Araña 12 Dof Arduino + 12 Servo SG90. FSElectronics. <https://fselectronics.cl/products/robot-arana-12-dof-arduino-12-servo-sg90>
