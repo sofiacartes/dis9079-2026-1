@@ -1,6 +1,6 @@
 # sesion-06
 
-##lunes 13 abril 2026
+## lunes 13 abril 2026
 
 Condensador - Capacitancia - Capacitor
 
