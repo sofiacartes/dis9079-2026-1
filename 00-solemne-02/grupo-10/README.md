@@ -80,8 +80,6 @@ Se usó un botón físico para decidir cuándo mandar información a Adafruit IO
   </em>
 </p>
 
-**Imagen 02**, *conexión de botón a Raspberry Pi Pico 2w*
-
 ## Código usado para enviar - Raspberry Pi Pico 2w
 
 ```cpp
