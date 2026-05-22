@@ -28,7 +28,7 @@ La detección capacitiva se usa mucho en dispositivos táctiles porque permite r
 
 ## Componentes y concepto base
 
-En los apuntes apareció también una base más electrónica para entender esto:
+una base más electrónica para entender esto:
 
 **resistencia
 condensador / capacitor
