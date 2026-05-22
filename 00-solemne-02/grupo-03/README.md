@@ -9,7 +9,14 @@
 ## Descripción textual del proyecto
 
 ## Materiales usados
-
++ Raspberry pi pico 2w
++ Arduino R4 Wifi
++ Protoboard
++ Cables dupont
++ Botón - pulsador
++ Pantalla OLED
++ Cable USB-C
++ Cable Micro USB
 ## Sensor usado
 
 ## Actuador usado
