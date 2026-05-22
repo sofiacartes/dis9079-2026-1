@@ -21,13 +21,15 @@ Tuvimos que revisar varias veces las conexiones físicas del circuito. Algunos c
 
 **Paso número 02**: usar método universal de Aarón para resolver los problemas 
 
-<img src="./sesion-10/metodouniversal.jpg" alt="metodouniversal" width="30%">   
+<img src="./imagenes/metodouniverlsal.jpg" alt="metodouniversal" width="40%">      
 
 La clase se basó mucho en analizar el problema paso a paso. Cada vez que algo no funcionaba, intentábamos pensar en una posible causa y probar una solución. Si esa solución no era correcta, volvíamos al paso anterior, revisábamos nuevamente y buscábamos otra alternativa. Este proceso de avanzar, equivocarnos, retroceder y volver a probar fue parte importante del aprendizaje, porque nos permitió entender mejor cómo se relacionan todas las partes del sistema.
 
 **MUCHAS COSAS NO QUERÍAN FUNCIONAR**
 
-**Paso número 03**: darse el tiempo de receso para eliminar frustración y volver a intentar.
+**Paso número 03**: darse el tiempo de receso para eliminar frustración y volver a intentar. 
+
+<img src="./imagenes/break.gif" alt="metodouniversal" width="40%">   
 
 Durante una de las pruebas tuvimos problemas al trabajar con el potenciómetro, porque este comenzó a enviar demasiados datos a Adafruit IO en muy poco tiempo. Como el potenciómetro entrega valores constantemente mientras se mueve, el código estaba publicando información casi sin pausa. Esto hizo que Adafruit IO nos bloqueara temporalmente el envío de datos, porque la plataforma tiene un límite de frecuencia para evitar que se manden demasiadas actualizaciones seguidas.
 
@@ -40,5 +42,9 @@ potenciometroFeed->save(valorPot);
 
 delay(1000);
 ```
+
+<img src="./imagenes/funciona.gif" alt="metodouniversal" width="40%"> 
+
+Luego, pasado la clase, seguimos probando hasta lograrlo!!! 
 
 Finalmente, esta sesión nos ayudó a visualizar el proyecto como una comunicación completa entre dispositivos. La Raspberry funcionaba como entrada, leyendo el movimiento del potenciómetro; Adafruit IO actuaba como puente de conexión entre ambos dispositivos; y el Arduino funcionaba como salida, transformando la información recibida en el movimiento del servo. En ese sentido, la clase fue importante para comprender cómo una acción física simple puede convertirse en un dato digital y luego generar una respuesta física en otro dispositivo.
