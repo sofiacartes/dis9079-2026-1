@@ -2,8 +2,6 @@
 
 Esta sesión fue la que juntó todo. El objetivo era armar un proyecto de interacción inalámbrica usando lo que se aprendió durante el semestre, Raspberry Pi Pico 2 W mandando una señal y Arduino UNO R4 WiFi recibiéndola. Me hice cargo de toda la parte del Arduino (el receptor) y del circuito físico, porque la verdad es que con esta placa me siento en casa y disfruto harto el proceso de armar y programar con ella.
 
----
-
 ### Cómo nos organizamos
 
 Se trabajó en dupla: mi compañero se encargó de la parte de la Raspberry Pi Pico 2 W (el emisor) y yo me concentré en el Arduino UNO R4 WiFi y el circuito. Antes de tocar la comunicación inalámbrica, decidí verificar que todo funcionara por partes, así si algo falla, sé exactamente dónde buscar.
