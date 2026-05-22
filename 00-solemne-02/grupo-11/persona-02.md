@@ -131,3 +131,11 @@ teamLab. (s.f.). Works. Recuperado de https://www.teamlab.art/works
 Torre Pro. (s.f.). SG90 micro servo datasheet. Recuperado de http://www.towerpro.com.tw/product/sg90-7
 
 Torrente Artero, Ó. (2013). Arduino: Curso práctico de formación. RC Libros.
+
+Herzog, L., Jansen, T. y Weschler, L. (2014). Strandbeest: The dream machines of Theo Jansen. Taschen.
+
+Krueger, M. W. (1983). Artificial reality. Addison-Wesley.
+
+Li, J. y Liu, H. (2016). Design optimization of Amazon robotics. Automation, Control and Intelligent Systems, 4(2), 48–52. https://doi.org/10.11648/j.acis.20160402.17
+
+teamLab. (s.f.). Works. Recuperado de https://www.teamlab.art/es/art/
