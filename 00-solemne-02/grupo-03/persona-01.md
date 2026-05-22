@@ -3,18 +3,34 @@
 nombre completo / github
 
 ## Sensor
-sensor botón / pulsador
+### sensor botón / pulsador
 
-Para esta investigación trabajé con el botón o pulsador, que es uno de los sensores más simples y básicos dentro de la electrónica. Su función principal es detectar si está siendo presionado o no, por lo que solo entrega dos estados posibles: 0 o 1, apagado o encendido, abierto o cerrado. Por esto se considera un sensor digital, ya que no mide valores intermedios, sino que responde a una acción puntual.
-A pesar de ser un componente muy simple, el botón es una de las formas más directas de interacción entre una persona y un sistema electrónico. Al presionarlo, el usuario entrega una instrucción clara al circuito, como encender una luz, activar un sonido, enviar un mensaje o iniciar una acción dentro de un programa. En ese sentido, el botón funciona como un puente entre una acción física humana y una respuesta digital. 
+Para esta investigación trabajé con el botón o pulsador que es uno de los sensores más simples dentro de la electrónica. Su función principal es detectar si está siendo presionado o no, por lo que solo entrega dos estados posibles: 0 o 1, apagado o encendido, abierto o cerrado. Por esto se considera un sensor digital, ya que no mide valores intermedios, sino que responde a una acción puntual.
+A pesar de ser un componente muy simple, el botón es una de las formas más directas de interacción entre una persona y un sistema electrónico. Al presionarlo, el usuario entrega una instrucción clara al circuito, como encender una luz, activar un sonido, enviar un mensaje o iniciar una acción dentro de un programa. En ese sentido, **el botón funciona como un puente entre una acción física humana y una respuesta digital.** 
  
-Funcionamiento
+**<ins>Funcionamiento<ins>**
 
-El botón funciona mediante dos contactos metálicos internos. Cuando no se presiona, estos contactos están separados y el circuito permanece abierto, por lo que la corriente no pasa. Al presionarlo, los contactos se juntan, el circuito se cierra y la corriente puede circular. Este cambio es leído por la placa, por ejemplo Arduino o Raspberry Pi, como una entrada digital.
-Para que la lectura sea estable, normalmente se utiliza una resistencia pull-up o pull-down. Esta resistencia permite que el pin tenga un valor definido cuando el botón no está siendo presionado. Sin esta resistencia, el pin puede quedar “flotando”, es decir, sin un valor claro, lo que puede producir lecturas falsas o cambios inesperados.
-En algunos casos, no es necesario agregar una resistencia física, ya que placas como Arduino permiten activar una resistencia interna desde el código usando INPUT_PULLUP. En este caso, el comportamiento puede parecer invertido: cuando el botón no está presionado puede leerse como HIGH, y cuando se presiona puede leerse como LOW.
+El botón funciona abriendo y cerrando un circuito. Cuando no está presionado, los contactos internos están separados y cuando se presiona, estos contactos se juntan. Ese cambio es lo que después puede leer el Arduino como una señal.
 
-Problemas que pueden aparecer
+En Arduino esto se trabaja con los pines digitales, que leen dos estados:
+
+**HIGH**: cuando llega una señal entre 2.6V y 5V.
+**LOW**: cuando llega una señal entre 0V y 2.5V.
+
+Nosotros usamos esos estados como una orden para el Arduino, si el botón está presionado puede pasar una cosa y si no está presionado, puede pasar otra.
+
+También hay que tener cuidado con el voltaje. **Los pines de entrada no deberían recibir más de 5V, porque se puede dañar la placa**. Si se quiere usar una señal más alta, hay que bajarla antes con un **divisor de tensión**.
+
+Para que el botón funcione bien, la señal no puede queda indefinida. Por eso se usan resistencias **pull-up o pull-down**, que ayudan a dejar claro qué valor tiene el pin cuando el botón no se está presionando. Si el pin queda indefinido Arduino puede leer cualquier cosa aunque no estemos tocando el botón.
+
+Hay dos formas comunes de conectarlo:
+
+**Pull-up**: cuando el botón no se presiona, el pin queda en HIGH / 5V. Al presionarlo, cambia a LOW / 0V.
+**Pull-down**: cuando el botón no se presiona, el pin queda en LOW / 0V. Al presionarlo, cambia a HIGH / 5V.
+
+La resistencia puede ser de distintos valores, pero normalmente se usan entre 1KΩ y 10KΩ. Arduino también tiene resistencias internas que se pueden activar desde el código, pero usar una resistencia externa ayuda a entender mejor el circuito y evitar errores.
+ 
+**<ins>Problemas que pueden aparecer<ins>**
 
 Uno de los problemas más comunes al trabajar con botones es el rebote. Esto pasa porque, al presionar el botón, los contactos internos no se juntan de manera completamente limpia, sino que generan pequeñas vibraciones durante unos milisegundos. Aunque para nosotros sea una sola presión, la placa puede leerlo como varias pulsaciones seguidas.
 Para solucionar esto se usa el debounce, que básicamente sirve para evitar que el sistema registre muchas lecturas falsas. Se puede hacer desde el código dejando un pequeño tiempo de espera después de detectar una presión, o también desde el circuito, agregando componentes que ayuden a estabilizar la señal.
