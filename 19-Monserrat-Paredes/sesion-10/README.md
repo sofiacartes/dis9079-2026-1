@@ -49,3 +49,16 @@ NO OLVIDAR!
 4. Crear el feed llamado estado en tu cuenta de Adafruit IO antes de ejecutar
 
 Después decidimos cambiarlo 
+
+Investigación 2
+
+Lo que queremos realizar en la solemne 2 es que desde la Raspberry pi envíe datos mediante un potenciómetro hacía el Arduino y que este encienda una luz y mueva un servomotor. Los datos enviados se verán reflejados en el feed de Adafruit.
+
+|Raspberry Pi Pico 2 W|Adafruit IO|Arduino UNO R4 wifi|
+|---|---|---|
+|Potenciómetro|MQTT|Led + servomotor|
+|ángulo|Feed: estado|enciende led y mueve servo|
+
+1. Girar el potenciómetro en la Raspberry -> va cambiandi el ángulo
+2. La Raspberry publica e ángulo en el feed de Adafruit IO
+3. El Arduino recibe el mensaje y mueve el servomotor. Al llegar a cierto ángulo se enciende el LED
