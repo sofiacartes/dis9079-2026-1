@@ -213,33 +213,6 @@ void loop() {
 ![led3](./imagenes/videoled1recorte.gif)
 
 **Imagen 09** *muestra la prueba realizada en el pin 13, enviando un código de encendido y apagado para corroborar tanto el correcto funcionamiento de la conexión del LED como la recepción del código enviado desde Arduino al pin 13.*
-## Código recibir, Experimentación en clases, Arduino UNO R4 Wifi
-
-**colocar aquí código, gif queda al final de toda esta parte de proceso**
-
-![gif](./imagenes/RaspberryArduinogif.gif)
-
-## Avance en clases Marlén Soto y Marcela Zúñiga
-
-Inicialmente, nuestro proyecto consistía en desarrollar un sistema IoT distribuido utilizando una Raspberry Pi, un Arduino UNO R4 WiFi, un sensor ultrasónico HC-SR04 y un micro servo motor SG90, conectados mediante la plataforma Adafruit IO utilizando el protocolo MQTT.
-
-La Raspberry Pi tendría la función de controlar el sensor ultrasónico HC-SR04, medir la distancia de un objeto y enviar periódicamente los datos obtenidos hacia Adafruit IO a través de internet. Posteriormente, el Arduino UNO R4 WiFi consultaría la información almacenada en la plataforma y, según la distancia recibida, controlaría el movimiento del servo motor SG90.
-
-El objetivo principal del proyecto era demostrar la comunicación inalámbrica entre distintos dispositivos mediante tecnologías IoT, integrando la adquisición de datos físicos, la transmisión en la nube y el control remoto de actuadores en tiempo real. Además, para evitar saturar el servicio gratuito de Adafruit IO, el sistema incorporaría intervalos de tiempo entre cada envío de datos.
-
-## Proceso realizado en clases
-
-Durante el desarrollo del proyecto comenzamos realizando el cableado de la Raspberry Pi junto con el sensor de distancia. Debido a que no teníamos experiencia previa trabajando con este tipo de sensores ni con la Raspberry Pi, fue necesario investigar profundamente el funcionamiento del hardware y sus conexiones, proceso que nos tomó aproximadamente una hora.
-
-Posteriormente, trabajamos en la programación del sensor y del botón, pero surgieron diversas dificultades relacionadas con librerías necesarias para el funcionamiento del sistema y múltiples errores en el código. Intentamos resolver estos problemas durante otra hora adicional, investigando posibles soluciones y realizando distintas pruebas, pero no logramos que el sistema funcionara correctamente dentro del tiempo disponible.
-
-Finalmente, debido a la falta de tiempo para continuar avanzando con nuestro proyecto inicial, tuvimos que incorporarnos al Grupo 10, integrado por Braulio Figuerio y Luisa Toro, con el fin de continuar el trabajo práctico de la clase.
-## Descripción del proyecto
-
-## Actuador usado - Led
-
-**Paso 1: Validar el hardware primero:**
-Montamos el LED con su resistencia de **220Ω** en la protoboard. Primero hicimos una prueba de alimentación directa a 5V para confirmar que el LED encendía, y después una prueba de control con un código de parpadeo en el **pin 13**. Ver que el LED respondía bien fue la señal para avanzar a la parte inalámbrica con confianza.
 
 ## Código recibir, Experimentación en clases, Arduino UNO R4 Wifi
 
@@ -307,11 +280,7 @@ void handleMessage(AdafruitIO_Data *data) {
 
 ![gif](./imagenes/RaspberryArduinogif.gif)
 
-**Imagen 10** *muestra el funcionamiento de este código al recibir info y prender el led*
-
 ## Avance en clases Marlén Soto y Marcela Zúñiga
-
-**Descripción textual del proyecto Trabajo en clases**
 
 Inicialmente, nuestro proyecto consistía en desarrollar un sistema IoT distribuido utilizando una Raspberry Pi, un Arduino UNO R4 WiFi, un sensor ultrasónico HC-SR04 y un micro servo motor SG90, conectados mediante la plataforma Adafruit IO utilizando el protocolo MQTT.
 
@@ -319,26 +288,13 @@ La Raspberry Pi tendría la función de controlar el sensor ultrasónico HC-SR04
 
 El objetivo principal del proyecto era demostrar la comunicación inalámbrica entre distintos dispositivos mediante tecnologías IoT, integrando la adquisición de datos físicos, la transmisión en la nube y el control remoto de actuadores en tiempo real. Además, para evitar saturar el servicio gratuito de Adafruit IO, el sistema incorporaría intervalos de tiempo entre cada envío de datos.
 
-## Proceso realizado en clases 
+## Proceso realizado en clases
 
 Durante el desarrollo del proyecto comenzamos realizando el cableado de la Raspberry Pi junto con el sensor de distancia. Debido a que no teníamos experiencia previa trabajando con este tipo de sensores ni con la Raspberry Pi, fue necesario investigar profundamente el funcionamiento del hardware y sus conexiones, proceso que nos tomó aproximadamente una hora.
 
 Posteriormente, trabajamos en la programación del sensor y del botón, pero surgieron diversas dificultades relacionadas con librerías necesarias para el funcionamiento del sistema y múltiples errores en el código. Intentamos resolver estos problemas durante otra hora adicional, investigando posibles soluciones y realizando distintas pruebas, pero no logramos que el sistema funcionara correctamente dentro del tiempo disponible.
 
-## Materiales usados en clases
-
-| Material | Cantidad | Precio aproximado (CLP) |
-|---|---:|---:|
-| Raspberry Pi | 1 | $151.790 |
-| Arduino UNO R4 WiFi | 1 | $34.990 |
-| HC-SR04 Ultrasonic Sensor | 1 | $3.290 |
-| SG90 Micro Servo Motor | 1 | $1.830 |
-| Protoboard | 1 | $2.590 |
-| Cables Dupont | 1 pack | $1.990 |
-| Cable USB | 1 | $3.000 |
-| Fuente de alimentación USB | 1 | $8.000 |
-
-**Finalmente, debido a la falta de tiempo para continuar avanzando con nuestro proyecto inicial, tuvimos que incorporarnos al Grupo 10, integrado por Braulio Figueroa y Luisa Toro, con el fin de continuar el trabajo práctico de la clase.**
+Finalmente, debido a la falta de tiempo para continuar avanzando con nuestro proyecto inicial, tuvimos que incorporarnos al Grupo 10, integrado por Braulio Figuerio y Luisa Toro, con el fin de continuar el trabajo práctico de la clase.
 
 ## Descripción del proyecto grupal final
 
@@ -635,6 +591,8 @@ Para documentar cómo logramos la comunicación entre dispositivos de distinta a
 
 ![diagrama](./imagenes/diagrama.JPG)
 
+**Imagen 16**
+
 El Puente de Datos (Adafruit IO) El feed compartido, llamado boton-prueba-grupo10, actúa como el punto de encuentro o "puente". Es fundamental entender que la Raspberry y el Arduino no están conectados entre sí, ambos están conectados a este Broker MQTT. El feed recibe el impulso y lo mantiene disponible para cualquier dispositivo que esté escuchando
 
 Conclusión del diagrama: Esta estructura demuestra nuestra capacidad para integrar dos lenguajes de programación distintos (Python y C++) en una sola solución funcional, logrando una interacción con latencia mínima y alta estabilidad gracias al manejo correcto de los eventos y la sincronización de la red.
@@ -653,9 +611,13 @@ Para ayudarles a entender lo que hicimos, iniciamos con un taller práctico para
 
  ![arduino](./imagenes/leds3.JPG)
 
+ **Imagen 17**
+
 - *Circuito Emisor:* Braulio lideró la explicación de la Raspberry Pi Pico 2 W, mostrando cómo conectar el botón de 4 pines,recordando la importancia de la configuración Pull-UP interna para evitar el ruido eléctrico y revisando nuevamente si la placa Raspberry Pi Pico 2w tenía todas las bibliotecas necesarias
 
 ![raspi](./imagenes/raspi2.JPG)
+
+**Imagen 18**
 
 ---
 
@@ -669,9 +631,11 @@ Explicamos que la arquitectura de archivos en MicroPython es distinta a la de un
 
 - En este punto surgió un error debido a que la otra Raspberry Pi Pico 2w no tenía todas las bibliotecas y archivos necesarios para funcionar bien
 
- 
-  
-- *Automatización con main.py:* Les enseñamos que para que la Raspberry funcione de forma independiente (sin estar conectada al PC), el archivo debe guardarse obligatoriamente con el nombre main.py. Si se guarda con otro nombre, el programa no se ejecutará al recibir energía.
+ ![carpetas](./imagenes/carpetasRaspi.jpg)
+
+ **Imagen 19** *en la imagen se muestra la comparativa entre una Raspberry Pi Pico 2w con todas las carpetas y archivos necesarias para funcionar y la otra sin los archivos necesarios para funcionar bien*
+
+ - *Automatización con main.py:* Les enseñamos que para que la Raspberry funcione de forma independiente (sin estar conectada al PC), el archivo debe guardarse obligatoriamente con el nombre main.py. Si se guarda con otro nombre, el programa no se ejecutará al recibir energía.
 
 1. Entorno del Arduino UNO R4 WiFi (C++)
 
@@ -689,7 +653,7 @@ Una vez que los dos nodos estuvieron operativos, salimos a probar la estabilidad
 
 - *Prueba de Obstáculos:* Colocamos las placas separadas por una pared de vidrio. A pesar del obstáculo físico, la señal se mantuvo estable gracias a que ambas compartían la misma red WiFi de 2.4GHz.
 
-<div align="center"> <video src="https://github.com/user-attachments/assets/f28bb838-175e-4d0b-ac70-f5c7eef1f5f3" width="315" autoplay loop muted playsinline></video> </div>
+![video](./imagenes/videoRaspividrio.gif)
   
 - *El desafío de la red móvil:* Al intentar alejarnos más, la conexión se perdió. Identificamos que el problema era la fuente del WiFi: cuando el emisor de la señal (Hotspot móvil) se alejaba demasiado de una de las placas, esta quedaba fuera de la red.
   
