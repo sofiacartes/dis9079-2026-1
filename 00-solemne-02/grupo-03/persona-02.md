@@ -75,24 +75,6 @@ Las pantallas OLED tienen una ventaja frente a las LCD tradicionales: **cada pí
 | Consumo típico | 20mA |
 | Tamaño diagonal | 0.96 pulgadas |
 
-### Comunicación I2C
-
-I2C (Inter-Integrated Circuit) es un protocolo de comunicación en serie que permite conectar múltiples dispositivos usando solo **dos cables de datos**: SDA (datos) y SCL (reloj), además de VCC y GND. Cada dispositivo tiene una dirección única (en nuestro caso `0x3C`), lo que permite al microcontrolador distinguirlo si hay más de un periférico en el mismo bus.
-
-```
-Arduino R4 WiFi      Pantalla OLED SSD1306
-─────────────        ─────────────────────
-5V        ────────►  VCC
-GND       ────────►  GND
-SDA (A4)  ────────►  SDA
-SCL (A5)  ────────►  SCL
-```
-
-```cpp
-Wire.begin();
-display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
-```
-
 ### Uso en el proyecto
 
 Cuando el Arduino recibe un mensaje desde el feed de Adafruit IO, ejecuta automáticamente la función `handleMessage()`, que pasa el contenido a `mostrarPantalla()`:
