@@ -653,7 +653,7 @@ Una vez que los dos nodos estuvieron operativos, salimos a probar la estabilidad
 
 - *Prueba de Obstáculos:* Colocamos las placas separadas por una pared de vidrio. A pesar del obstáculo físico, la señal se mantuvo estable gracias a que ambas compartían la misma red WiFi de 2.4GHz.
 
-<div align="center"> <video src="https://github.com/user-attachments/assets/f28bb838-175e-4d0b-ac70-f5c7eef1f5f3" width="315" autoplay loop muted playsinline></video> </div>
+![video](./imagenes/videoRaspividrio.gif)
   
 - *El desafío de la red móvil:* Al intentar alejarnos más, la conexión se perdió. Identificamos que el problema era la fuente del WiFi: cuando el emisor de la señal (Hotspot móvil) se alejaba demasiado de una de las placas, esta quedaba fuera de la red.
   
