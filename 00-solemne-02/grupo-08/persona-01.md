@@ -198,11 +198,11 @@ El uso constante puede deteriorar la pista resistiva interna del potenciómetro.
 
 ## Proyecto o referente artístico (sensor y robótica musical)
 
-Erin Gee “Swarming Emotional Pianos”
+### Erin Gee “Swarming Emotional Pianos”
 
 Nacida en 1983, es una artista y compositora canadiense cuyo trabajo se centra en la voz, la emoción y la tecnología. Desarrolla instrumentos de biorretroalimentación personalizados que conectan el cuerpo humano con el sonido y los sistemas interactivos. Al crear estos sistemas, considera la manipulación emocional como una capa técnica que complementa el hardware y el software, vinculándola con la teoría feminista.
 
-trabaja mezclando:
+### Trabaja mezclando:
 
 - biometría.
   
@@ -214,14 +214,14 @@ trabaja mezclando:
 
 - sistemas interactivos.
 
-Sobre el proyecto: Swarming Emotional Pianos
+### Sobre el proyecto: Swarming Emotional Pianos
 
 Una imponente proyección de un artista humano rodeado de seis robots musicales con campanillas: su música está impulsada por los ritmos cambiantes del cuerpo emocional del artista, transformados en datos y señales que activan los motores del conjunto.
 
 Instalación robótica que presenta la documentación de una actuación de una actriz que experimenta emociones extremas en intervalos de cinco minutos. Durante estas actuaciones cronometradas de sorpresa, ira, miedo, tristeza, excitación sexual y alegría extremas, Gee utilizó biosensores diseñados a medida para capturar cómo cada emoción afecta el ritmo cardíaco, la sudoración y la respiración de la actriz. Los datos de esta sesión impulsan las explosiones musicales de la robótica que rodea la documentación en video de la sesión emocional.
 
 
-Tecnologías utilizadas:
+### Tecnologías utilizadas:
 
 - Arduino.
 
@@ -232,6 +232,7 @@ Tecnologías utilizadas:
 - microcontroladores.
 
 - sistemas de sonido robótico.
+
   
 Es interesante, ya que trabaja directamente con emociones humanas convertidas en comportamiento robótico, eso genera una experiencia mucho más sensible y perturbadora.
 
@@ -286,7 +287,7 @@ Puede girar normalmente entre 0° y 180°, dependiendo de la señal enviada desd
 ---
 
 
-### Es ampliamente utilizado en:
+### Es utilizado en:
 
 - Robótica.
 
@@ -404,14 +405,14 @@ Provocado por movimientos forzados o uso continuo.
 
 ## Proyecto o referente artístico (actuador)
 
-Moritz Simon Geist “Vibrations”
+### Moritz Simon Geist “Vibrations”
 
 Moritz Simon Geist es un artista visual, investigador y productor musical cuyo trabajo se centra en la intersección de la robótica, el sonido físico y la agencia algorítmica. Su práctica explora la transición de instrumentos mecánicos funcionales a entidades autónomas, examinando la materialidad y las condiciones psicológicas y estéticas de la interacción humano-máquina.
 
 Con una sólida formación en física de semiconductores y robótica, Geist deconstruye sistemas técnicos complejos para investigar la fragilidad de los materiales y el comportamiento algorítmico. Su evolución artística ha pasado de instalaciones cinéticas performativas a esculturas autónomas a gran escala que utilizan inteligencia artificial y visión artificial para interactuar con su entorno.
 
 
-Trabaja mezclando:
+### Trabaja mezclando:
 
 - robótica.
 
@@ -426,7 +427,7 @@ Trabaja mezclando:
 Su trabajo busca crear música utilizando máquinas reales en vez de sonido digital
 
 
-Sobre el proyecto:
+### Sobre el proyecto:
 
 “Vibrations” es un enorme instrumento robótico autónomo inspirado en un vibráfono.
 
@@ -435,7 +436,7 @@ La instalación sonora cinética "VIBRATIONS" reflexiona sobre la espacialidad y
 Ninguno de los sonidos de este instrumento es interpretado por humanos, sino por 36 pequeños actuadores robóticos. La mecánica introduce ligeras variaciones en el sonido y el ritmo, que resultan orgánicas en contraste con los sonidos generados por ordenador. Por otro lado, los robots son lo suficientemente precisos como para reproducir estructuras repetitivas que ningún ser humano podría reproducir. Esto crea una nueva forma sonora («música electrónica robótica») que es a la vez orgánica y mecánica.
 
 
-Tecnologías utilizadas:
+### Tecnologías utilizadas:
 
 - actuadores robóticos.
 
