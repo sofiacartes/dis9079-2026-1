@@ -644,10 +644,11 @@ void loop() {
 ```
 ## Imágenes del proyecto
 ![movimiento](imagenes/movimiento.jpeg)
-![solemne](imagenes/solemne.gif)
 
 
 ## Animaciones del proyecto
+![solemne](imagenes/solemne.gif)
+
 ### Frames
 ![frames](imagenes/frames.png)
 
