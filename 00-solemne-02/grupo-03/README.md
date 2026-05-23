@@ -8,6 +8,20 @@
 
 ## Descripción textual del proyecto
 
+Nuestro proyecto funciona como un sistema de comunicación entre dos dispositivos, donde una acción física simple se transforma en un mensaje digital y luego en una respuesta visual. Para esto usamos una Raspberry Pi como dispositivo de entrada, un botón como sensor, Adafruit IO como puente de comunicación, un Arduino como dispositivo receptor y una pantalla OLED como salida visual.
+
+La Raspberry Pi funciona como el punto de inicio del sistema. En ella conectamos un botón al pin GP0, que detecta si está presionado o no. En el código, el botón usa una resistencia interna pull-up, por lo que cuando está suelto la placa lee `True`, y cuando se presiona lee `False`. Esto permite detectar el momento exacto en que ocurre la pulsación. El botón, entonces, no funciona solo como un interruptor, sino como un gesto de contacto: es el momento en que una persona toca el sistema y le entrega una intención.
+
+Cada vez que se presiona el botón, el código activa un contador de pulsaciones. Este contador hace que el botón no envíe siempre el mismo mensaje, sino que avance en una secuencia. La primera pulsación envía `"Sonríe por mí"`, la segunda `"amigo"`, la tercera `"yo sonrío por ti"` y la cuarta `"..."`. Después de eso, la secuencia vuelve a empezar. La frase se construye por partes, como si necesitara tiempo, escucha y presencia para completarse.
+
+Ese mensaje no queda solo dentro de la Raspberry. La placa se conecta a internet por WiFi y publica la información en Adafruit IO, específicamente en el feed `prueba05`, usando comunicación MQTT. En este punto, Adafruit funciona como un puente: recibe lo que nace desde el botón y lo deja disponible para que otro dispositivo pueda escucharlo.
+
+La segunda parte ocurre en el Arduino, que se conecta al mismo feed `prueba05`. En el código, el Arduino queda esperando mensajes nuevos mediante la función `onMessage`. Cuando llega información desde Adafruit IO, se activa la función `handleMessage`, que toma ese dato, lo convierte en texto y lo envía a la pantalla OLED. Esta pantalla está conectada por comunicación I2C, usando los pines VCC, GND, SCL y SDA, y funciona como la salida visual del sistema.
+
+La frase que elegimos la encontramos en *Éramos unos niños* de Patti Smith: "Sonríe por mí, Patti, porque yo sonrío por ti". Nos resonó ya que habla desde el afecto, la convertimos en una secuencia fragmentada en cuatro partes, y en el fondo todo eso es bastante parecido a nuestra metodología de trabajo. Existieron muchos momentos donde no entendíamos nada y la conexión de ideas simplemente no llegaba. En esos momentos, lo que nos ayudó fue dejar de insistir. Comer algo, reírnos un rato y soltar un poco la presión. Siempre después de esas pausas algo nos hacía clic, ya fuera en el mismo código o en nuestra cabeza.
+
+Por eso este proyecto nos hace sentido más allá de lo técnico. La frase de Patti habla sobre sostenerse, y eso es lo que hicimos. De alguna forma eso fue suficiente para seguir y terminar algo de lo que estamos orgullosos.
+
 ## Materiales usados
 | Material              | Descripción / Función                                                                 |
 |-----------------------|---------------------------------------------------------------------------------------|
