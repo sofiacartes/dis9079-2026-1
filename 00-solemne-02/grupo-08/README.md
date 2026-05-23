@@ -310,7 +310,7 @@ void loop() {
 
 |foto|foto|foto|
 |----|----|----|
-|<img src="./imagenes/valentina_imagenes/lumi1.jpg" alt="final" width="300">|<img src="./imagenes/valentina_imagenes/lumi2.jpg" alt="final" width="300">|<img src="./imagenes/valentina_imagenes/lumi3.jpg" alt="final" width="300">|
+|<img src="./imagenes/valentina_imagenes/lumi1.jpg" alt="final" width="300">|<img src="./imagenes/valentina_imagenes/lumi7.jpeg" alt="final" width="300">|<img src="./imagenes/valentina_imagenes/lumi3.jpg" alt="final" width="300">|
 |<img src="./imagenes/valentina_imagenes/lumi4.jpg" alt="final" width="300">|<img src="./imagenes/valentina_imagenes/lumi5.jpg" alt="final" width="300">|<img src="./imagenes/valentina_imagenes/lumi6.jpg" alt="final" width="300">|
 
 ## Animaciones del proyecto
