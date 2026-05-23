@@ -314,7 +314,7 @@ Imagenes de proyecto
 ## Investigación Actuador: Servomotor SG90
 
 
-<img width="657" height="473" alt="actuadorServomotor" src="https://github.com/user-attachments/assets/e1c20bee-a216-41b8-b5b7-c23dd17c73b0" />
+<img width="700" height="688" alt="ServoMotor" src="https://github.com/user-attachments/assets/aaa1e0ae-85ec-481f-9783-c3f60e115224" />
 
 
 ### ¿Qué es un actuador?
