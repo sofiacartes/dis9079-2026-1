@@ -15,8 +15,10 @@ Lunes 18 Mayo 2026
 
  "Soniloide" es un dispositivo que produce sonido a distancia.
 Inspirados en los instrumentos musicales de la empresa [“Maywa Denki”](https://www.maywadenki.com/) es que surge este nuevo artefacto. 
-[![Video chan](https://img.youtube.com/vi/fI1Mr4SIES4/maxresdefault.jpg)](https://youtu.be/fI1Mr4SIES4?si=4tkdgTu-GWVezCG9)
-▼ Video de “Chan: cómo armar el Kit” (チャン　工作キットのつくり方)
+
+[![Ver video](https://img.youtube.com/vi/fI1Mr4SIES4/hqdefault.jpg)](https://www.youtube.com/watch?v=fI1Mr4SIES4&t=1s)
+
+▼ _Video de “Chan: cómo armar el Kit” (チャン　工作キットのつくり方)_
 
 Mediante mecanismos, botones, un solenoide, placas programáticas con wifi y otros componentes es que se emiten ruidos mediante el envío y recepción de datos a través de [Adafruit IO](https://io.adafruit.com/welcome).
 
@@ -24,8 +26,9 @@ De forma más detallada el proyecto consta de enviar señales inalámbricamente.
 
 ## Video en Funcionamiento
 
-[![Video prueba](https://img.youtube.com/vi/Q4U23jE60xg/maxresdefault.jpg)](https://youtube.com/shorts/Q4U23jE60xg?si=ce4Ev4bNzpgEaBKN)
-▼ Video Completo aún no hecho
+[![Video prueba](https://img.youtube.com/vi/oNwlt8zLPlE/hqdefault.jpg)](https://youtu.be/oNwlt8zLPlE?si=q5KmNvolMyJ7Z7kM)
+
+▼ _Video funcionamiento piezas del proyecto (falta incluir carcasa)_
 
 
 ## Bill of materials
@@ -34,7 +37,7 @@ De forma más detallada el proyecto consta de enviar señales inalámbricamente.
 | ------------------- | ----- | -------- | ------- | ----------------  |
 | Arduino UNO R4 WiFi | Placa de desarrollo | 1   | $38.990 | <https://mcielectronics.cl/shop/product/43402/> |
 | Raspberry Pi Pico 2 W | Placa de desarrollo | 1   | $14.990 | <https://mcielectronics.cl/shop/product/74358//> |
-| Mini Protoboard 400 Puntos | Placa prototipado | 2  | $1.500 | <https://afel.cl/products/mini-protoboard-400-puntos> |
+| Mini Protoboard 400 Puntos | Placa prototipado | 1  | $1.500 | <https://afel.cl/products/mini-protoboard-400-puntos> |
 | Kit 200 Botones Pulsadores | Componente | 1 | $4.500 | <https://afel.cl/products/kit-200-botones-pulsadores-distintos-tamanos/> |
 | Cable Dupont Macho Macho 10cm | Cable | Pack 40 | $2.590 | <https://mcielectronics.cl/shop/product/cable-dupont-macho-macho-20cm-pack-40-unidades/> |
 | Mini Solenoide DC 5V | Componente | 1 | $ 3.980 | <https://hubot.cl/producto/mini-solenoide%C2%82-dc-5v/> |
@@ -43,15 +46,6 @@ De forma más detallada el proyecto consta de enviar señales inalámbricamente.
 | Adaptador jack DC hembra | Componente | 1 | $ 790 | <https://www.mechatronicstore.cl/adaptador-jack-dc-hembra/> |
 | Potenciometro B100K | Componente | 1 | $495 | <https://altronics.cl/potenciometro-lineal-100k-b100k> |
 | Pantalla LCD OLED 0,96 | Componente | 1 | $4.500 | <https://afel.cl/products/pantalla-lcd-oled-azul-y-amarillo-0-96> |
-
-### Modelado 3D en Fusion360, PLA transparente.
-Felix nos ayudó con el modelado, teníamos problemas con las tolerancias y el mecanismo.
-
-
-![modelado](./imagenes/solinoide1.png)
-![modelado](./imagenes/piezas.png)
-![modelado](./imagenes/solinoide.png) 
-
 
 ## Input: Raspberry pi pico 2w con Sensor
 
@@ -270,7 +264,7 @@ while True:
 
 ## Output: Arduino UNO R4 Wifi con Solenoide
 
-Para la recepción de la información y activación del solenoide fue necesario
+Para la recepción de la información y activación del solenoide fue necesaria la construcción de un circuito que impique conectar el arduino a dicho motor. Este último a su vez se encuentra cableado a un relé de 1 canal cuya alimentación se debe una fuente de poder de 5V y 2A (corriente eléctrica). Para su funcionamiento requiere si o si de tener energía tanto para la placa como para el relé. Ya con todo conectado, es necesaria la recepción de los datos desde Adafruit IO para el movimiento del solenoide.
 
 ### Código para recibir
 
@@ -448,10 +442,14 @@ flowchart TB
 
     n8@{ shape: rect}
 ```
-### Monitor Serial de Arduino
-..................................................................................................
 
-## Imágenes del proyecto
+## Modelado de carcasa e impresión 3D
+
+Para esta parte Felix nos ayudó con el modelado de la carcasa, dado problemas previos con las tolerancias y el mecanismo. El modelado fue impreso en PLA transparente en la impresora Bambu  x1c.
+
+![modelado](./imagenes/solinoide1.png)
+![modelado](./imagenes/solinoide.png) 
+![modelado](./imagenes/piezas.png)
 ![modelado](./imagenes/carita.jpeg)  
 ![modelado](./imagenes/espalda.jpeg)  
 
@@ -470,12 +468,11 @@ Aportes, información y exploraciones personales compartidas con el equipo.
 
 * <https://learn.adafruit.com/series/adafruit-io-basics>
 * <https://github.com/adafruit/Adafruit_IO_Arduino>
-*
-*<https://github.com/adafruit/Adafruit_IO_Arduino/blob/master/examples/adafruitio_01_subscribe/adafruitio_01_subscribe.ino>
+* <https://github.com/adafruit/Adafruit_IO_Arduino/blob/master/examples/adafruitio_01_subscribe/adafruitio_01_subscribe.ino>
 * <https://docs.arduino.cc/tutorials/uno-r4-wifi/wifi-examples/#wi-fi-udp-send-receive-string>
 * <https://pip-assets.raspberrypi.com/categories/1088-raspberry-pi-pico-2-w/documents/RP-008305-DS-1-pico-2-w-pinout.pdf>
-* <https://www.youtube.com/watch?v=nwVRMU9grSI&t=501s >
-* <https://youtu.be/fI1Mr4SIES4?si=58ErEgpNSsdA2vBf >
-* <https://www.youtube.com/watch?v=RfrDtAEQ95c&t=6s >
-* <https://www.youtube.com/watch?v=O7uXMCD8bZM >
-* <http://www.zonhen.com/solenoid/ZHO-0420-en.html >
+* <https://www.youtube.com/watch?v=nwVRMU9grSI&t=501s>
+* <https://youtu.be/fI1Mr4SIES4?si=58ErEgpNSsdA2vBf>
+* <https://www.youtube.com/watch?v=RfrDtAEQ95c&t=6s>
+* <https://www.youtube.com/watch?v=O7uXMCD8bZM>
+* <http://www.zonhen.com/solenoid/ZHO-0420-en.html>

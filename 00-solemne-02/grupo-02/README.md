@@ -34,6 +34,41 @@ Finalmente, debido a la falta de tiempo para continuar avanzando con nuestro pro
 | Cable USB | 1 | $3.000 |
 | Fuente de alimentación USB | 1 | $8.000 |
 
+# Problemas encontrados en el proyecto inicial
+
+Durante el desarrollo inicial de nuestro proyecto, uno de los principales problemas se presentó en la Raspberry Pi Pico 2W, ya que el código utilizado para controlar el sensor ultrasónico HC-SR04 arrojaba múltiples errores relacionados con bibliotecas faltantes.
+
+Visual Studio Code mostraba mensajes de error indicando que módulos como:
+
+```python
+import wifi
+import socketpool
+import board
+import adafruit_hcsr04
+import adafruit_minimqtt.adafruit_minimqtt as MQTT
+import digitalio
+```
+![Errores de bibliotecas en VS Code](imagenes/error_bibliotecas.png)
+
+Estos errores aparecían debido a que CircuitPython requiere librerías específicas instaladas manualmente dentro de la carpeta `lib` de la unidad `CIRCUITPY`.
+
+## Bibliotecas faltantes
+
+| Biblioteca |
+|---|
+| adafruit_minimqtt |
+| adafruit_requests.mpy |
+| adafruit_connection_manager.mpy |
+| adafruit_bus_device |
+| adafruit_ticks.mpy |
+| adafruit_hcsr04.mpy |
+
+## Librerías instaladas
+
+![Librerías instaladas](imagenes/librerias_instaladas.png)
+
+Luego de investigar el funcionamiento de CircuitPython y agregar las bibliotecas necesarias, logramos avanzar parcialmente en el proyecto.
+
 ## Descripción textual del proyecto
 
 ## Sensor usado
@@ -381,14 +416,14 @@ Al inicio de la sesión, realizamos una prueba utilizando un código desarrollad
 El primer inconveniente fue la conexión de alimentación: el cable estaba conectado a 5V, cuando lo correcto era utilizar 13V, ya que la conexión inicial solo permitía verificar el funcionamiento del LED, pero no era la adecuada para el comportamiento esperado del sistema.
 
 Una vez corregido ese punto, nos encontramos con un segundo problema: el LED no lograba apagarse correctamente. Para resolverlo, desarrollamos dos códigos adicionales, modificando distintas secciones de la programación y realizando múltiples pruebas. Sin embargo, ninguna de las modificaciones solucionó el inconveniente.
-![error](imagenes/Luz_prendida.jpg)
+![error](imagenes/Luz_prendida.png)
 
 Finalmente, determinamos que el problema no estaba en el código, sino en la configuración interna de la Raspberry Pi Pico 2W. El dispositivo había sido modificado previamente y solo mantenía activa la señal de encendido del LED (valor `1`), mientras que la señal de apagado (valor `0`) no funcionaba correctamente. Al identificar este origen, volvimos al código inicial y pudimos continuar con el desarrollo del proyecto.
 
 Como parte adicional de la práctica, quisimos comprobar si el sistema funcionaba a larga distancia. Para ello, fue necesario conectarnos a una red distinta, ya que al alejarnos del punto de acceso original la señal se debilitaba al punto de desconectarse. Al cambiar de red logramos mantener una conexión estable y verificar que el sistema respondía correctamente incluso a mayor distancia.
 
 ![Arduino](imagenes/arduino_conectado.jpg)
-<img width="1825" height="865" alt="arduino_conectado" src="https://github.com/user-attachments/assets/7c703236-4e96-40bb-b194-9d0e745d945c" />
+
 
 ![Arduino](imagenes/prueba1.jpg)
 ## Imágenes del proyecto

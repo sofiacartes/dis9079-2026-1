@@ -37,6 +37,8 @@ La Raspberry Pi interpreta este cambio mediante una entrada analógica ADC, conv
 
 El potenciómetro actúa como interfaz de control principal del sistema, permitiendo manejar el comportamiento del servomotor en tiempo real.
 
+<img src="./imagenes/valentina_imagenes/pote.png" alt="valores" width="150">
+
 ## Actuador usado
 
 `Servomotor SG90`
@@ -44,6 +46,8 @@ El potenciómetro actúa como interfaz de control principal del sistema, permiti
 El actuador principal del proyecto es un servomotor SG90. Este tipo de motor permite controlar con precisión el ángulo de movimiento mediante señales PWM enviadas desde el Arduino.
 
 El servo recibe los datos provenientes del feed “moluscos” y ajusta su posición según los valores entregados por el potenciómetro. Cuando alcanza un ángulo determinado, el sistema activa un LED amarillo como indicador visual del estado alcanzado.
+
+<img src="./imagenes/valentina_imagenes/servomotor.png" alt="valores" width="150">
 
 ## Pseudocódigo
 
@@ -172,8 +176,7 @@ Luego, en el código que recibe. El arduino lee estos valores y procede a mover 
 
 //  Recibe ángulo (0-180°) desde Adafruit IO
 //  → Mueve el servo SG90 a ese ángulo
-//  → Si ángulo >= 150°: LED rojo enciende (señal de término)
-//  → Si ángulo <  150°: LED rojo apagado
+// si el ángulo pasa los 125° → enciende LED amarillo
 #include <WiFiS3.h>
 #include <ArduinoMqttClient.h>
 #include <Servo.h>
@@ -191,7 +194,7 @@ const char* FEED_ANGULO   = "blablabla/feeds/moluscos";
 
 // definir pines del servo y led
 const int PIN_SERVO    = 9;
-const int PIN_LED_ROJO = 3;
+const int PIN_LED_ROJO = 3; // ya no es rojo, upsi
 
 // angulo a partir del cual enciende el LED (señal de termino)
 const int ANGULO_TERMINO = 125;

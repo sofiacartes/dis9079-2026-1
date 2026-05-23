@@ -53,7 +53,13 @@ Aarón nos sugirió que hiciéramos algo más tangible para controlar la sobreca
 
 Por recomendación de Aarón buscamos documentos que tuvieran un código parecido al que necesitábamos. Encontramos:
 <https://docs.sunfounder.com/projects/pico-2w-kit/en/latest/cproject/ar_button.html>.
-En un inicio tratamos de hacer la conexión con un resistor de 220 a recomendación de Aarón, luego vimos la posibilidad de hacerlo con un Rpullup o un Rpulldown como aparecía en el documento y como lo hicieron en el grupo 05, decidimos esto último para que la protoboard no estuviera tan saturada de conexiones.
+En un inicio tratamos de hacer la conexión con un resistor de 220 ohms a recomendación de Aarón:
+
+<img src="./imagenes/intentoresistor.jpej" alt="install" width="500">
+
+Luego vimos la posibilidad de hacerlo con un Rpullup o un Rpulldown como aparecía en el documento y como lo hicieron en el grupo 05, decidimos esto último para que la protoboard no estuviera tan saturada de conexiones.
+
+<img src="./imagenes/intentoboton.jpeg" alt="install" width="500">
 
 Luego de implementar en nuestro código los fragmentos del sitio, lo corrimos y ahora solo se enviaban datos cuando movemos el potenciómetro (antes se enviaban siempre cada 0.2 segundos).
 
@@ -390,6 +396,16 @@ void loop() {
 
 ## Imágenes del proyecto
 
+
+<img src="./imagenes/fotoproyecto.jpeg" alt="install" width="500">
+
+
+<img src="./imagenes/raspirosa.jpeg" alt="install" width="500">
+
+
+<img src="./imagenes/pasillo.jpeg" alt="install" width="500">
+
+
 <img src="./imagenes/monitorserial.jpeg " alt="install" width="500">
 
 
@@ -398,7 +414,32 @@ void loop() {
 ## Animaciones del proyecto
 
 
+<img src="./imagenes/enviar.gif " alt="install" width="500">
+
+Enviando 
+
+<img src="./imagenes/recibir.gif " alt="install" width="500">
+
+Recibiendo
+
+
+
+
+
+
 
 ## Bibliografía
-https://eepower.com/resistor-guide/resistor-types/potentiometer/#
-https://www.youtube.com/watch?v=sWbSeJmUFfw
+
+<https://eepower.com/resistor-guide/resistor-types/potentiometer/#>
+
+<https://www.youtube.com/watch?v=sWbSeJmUFfw>
+
+<https://docs.sunfounder.com/projects/pico-2w-kit/en/latest/cproject/ar_button.html>
+
+
+<https://raspberrypi.cl/products/raspberry-pi-pico-2-w-con-headers>
+
+
+<https://www.codigoiot.com/base-de-conocimiento/botones/>
+
+

@@ -47,16 +47,207 @@ Se utilizó como actuador una pantalla OLED junto con un push button. El funcion
 
 La pantalla OLED funciona mediante comunicación digital (generalmente protocolo I2C), lo que permite transmitir datos desde el microcontrolador hacia la pantalla usando pocos pines. Este tipo de pantalla se caracteriza por su bajo consumo energético, buen contraste y capacidad de mostrar texto o gráficos de forma clara. Por otro lado, el push button es un interruptor momentáneo que cierra el circuito solo mientras se presiona, enviando una señal digital al sistema.
 
-Aprendizajes del uso de animaciones:
+### Aprendizajes y errores
 
-Las principales dificultades que tuvimos al realizar la animación fueron que, al principio, los frames no corrían correctamente en la pantalla. Después de investigar y ver varios videos, logramos que la pantalla mostrara un frame estático, aunque todavía sin movimiento.
+Con el sensor PIR tuvimos varios problemas. Trabajamos con dos modelos distintos: uno que venía con cables integrados y otro sin ellos. Por lo que investigamos, el que tenía cables estaba modificado. El sensor con cables integrados nunca logró funcionar correctamente, incluso después de probar distintos códigos y configuraciones.
+
+![sensores](imagenes/sensores.png)
+
+Finalmente cambiamos al otro sensor, y ahí el sistema comenzó a responder, aunque no de la manera que esperábamos. Lo más difícil fue calibrar la sensibilidad, ya que el sensor detectaba movimiento con cambios mínimos en el entorno.
+
+Investigando sobre su funcionamiento, descubrimos que el sensor cuenta con dos reguladores. Uno controla la sensibilidad: mientras más alto está ajustado, más sensible es el sensor; y mientras más bajo, menos sensible se vuelve. El segundo regulador controla el tiempo que la señal permanece activada: si está alto, la salida se mantiene en estado HIGH por más tiempo, y si está bajo, vuelve más rápido al estado LOW.
+
+Y las principales dificultades que tuvimos al realizar la animación fueron que, al principio, los frames no corrían correctamente en la pantalla. Después de investigar y ver varios videos, logramos que la pantalla mostrara un frame estático, aunque todavía sin movimiento.
+
 El siguiente desafío fue agregar los demás frames, ya que teníamos que convertir cada imagen individualmente usando Image2CPP, y en varias ocasiones el código nos arrojaba errores.
-Finalmente, conseguimos que el GIF funcionara correctamente y se reprodujera completo en la pantalla. Sin embargo, no logramos implementar el cambio entre distintos GIFs.
 
-foto de los settings de image2cpp
+Finalmente, conseguimos que el GIF funcionara correctamente y se reprodujera completo en la pantalla.
+
+### Pruebas de animacion
+![pruebas](imagenes/pruebas1.gif)
+![pruebas](imagenes/pruebas.gif)
+![pruebas](imagenes/pruebas3.jpeg)
+![pruebas](imagenes/pruebas2.jpeg)
+
 
 
 ## Código usado para enviar
+
+```cpp
+import time
+import board
+import digitalio
+import wifi
+import socketpool
+import adafruit_minimqtt.adafruit_minimqtt as MQTT
+
+
+
+
+# ---------------- WIFI ----------------
+SSID = "bla"
+PASSWORD = "bla"
+
+
+
+
+# ---------------- ADAFRUIT IO ----------------
+AIO_USER = "bla"
+AIO_KEY = "bla"
+FEED = "detector-movimiento"
+
+
+
+
+# ---------------- PIR ----------------
+pir = digitalio.DigitalInOut(board.GP2)
+pir.direction = digitalio.Direction.INPUT
+
+
+
+
+# ---------------- BOTÓN (HOLD) ----------------
+button = digitalio.DigitalInOut(board.GP0)
+button.direction = digitalio.Direction.INPUT
+button.pull = digitalio.Pull.UP
+
+
+
+
+# ---------------- WIFI ----------------
+print("Conectando WiFi...")
+wifi.radio.connect(SSID, PASSWORD)
+print("WiFi OK")
+
+
+
+
+pool = socketpool.SocketPool(wifi.radio)
+
+
+
+
+mqtt = MQTT.MQTT(
+  broker="io.adafruit.com",
+  username=AIO_USER,
+  password=AIO_KEY,
+  socket_pool=pool
+)
+
+
+
+
+mqtt.connect()
+print("MQTT OK")
+
+
+
+
+# ---------------- CALIBRACIÓN ----------------
+print("Calibrando PIR...")
+time.sleep(30)
+print("Listo")
+
+
+
+
+# ---------------- VARIABLES ----------------
+pir_state = False
+motion_start_time = 0
+last_motion_time = 0
+
+
+
+
+MIN_TRIGGER_TIME = 0.8
+COOLDOWN = 2
+
+
+
+
+motion_count = 0
+
+
+
+
+# ---------------- LOOP ----------------
+while True:
+
+
+
+
+  system_active = not button.value  # botón mantenido
+
+
+
+
+  if system_active:
+
+
+
+
+      current = pir.value
+
+
+
+
+      if current and not pir_state:
+          motion_start_time = time.monotonic()
+
+
+
+
+      if current and pir_state:
+          duration = time.monotonic() - motion_start_time
+
+
+
+
+          if duration >= MIN_TRIGGER_TIME:
+              if time.monotonic() - last_motion_time > COOLDOWN:
+
+
+
+
+                  motion_count += 1
+
+
+
+
+                  print("MOVIMIENTO DETECTADO #", motion_count)
+
+
+
+
+                  try:
+                      mqtt.publish(
+                          f"{AIO_USER}/feeds/{FEED}",
+                          f"motion:{motion_count}"
+                      )
+                  except Exception as e:
+                      print("Error MQTT:", e)
+
+
+
+
+                  last_motion_time = time.monotonic()
+
+
+
+
+      pir_state = current
+
+
+
+
+  else:
+      pir_state = False
+
+
+
+
+  time.sleep(0.01)
+```
 
 ## Código usado para recibir
 ```cpp
@@ -644,10 +835,11 @@ void loop() {
 ```
 ## Imágenes del proyecto
 ![movimiento](imagenes/movimiento.jpeg)
-![solemne](imagenes/solemne.gif)
 
 
 ## Animaciones del proyecto
+![solemne](imagenes/solemne.gif)
+
 ### Frames
 ![frames](imagenes/frames.png)
 

@@ -219,8 +219,45 @@ El sistema es controlado mediante un microcontrolador Arduino, el cual envía se
   - impresión 3D
   - placas modulares livianas
   - tornillos
+ 
+`Otro proyecto que utiliza Servomotor SG90 es....`
 
-**Código que recibe, en Arduino IDE**
+### AND-Y (wujuu!!)
+
+<img src="./imagenes/sofia_imagenes/AND-Y.jpg" alt="andy" width="200">
+
+- Robot interactivo que te invita reflexionar de manera lúdica sobre nuestras relaciones con las máquinas
+- And-y, nace a partir del siguiente encargo: crear una máquina saludadora. Con eso en mente, diseñamos un robot que genera una experiencia interactiva, donde en cada fase tiene una respuesta diferente. And-y funciona mediante los inputs de sensores ultrasónicos, generando outputs como servo motor, motor joystick y mp3. Cada etapa del proyecto implicó diversas dificultades, aciertos, bocetos, pruebas y prototipos.
+
+`código, clase servo`
+
+```cpp
+// controla el brazo servomotor de AND-Y
+void SalidaDedo::configurar() {
+  servo.attach(patitaServo);
+  servo.write(0); // posición inicial: abajo
+}
+
+void SalidaDedo::levantar() {
+  servo.write(180); // sube el brazo a 180°
+}
+
+void SalidaDedo::bajar() {
+  servo.write(0); // baja el brazo a 0°
+}
+
+int patitaServo = 13; // pin de conexión
+```
+
+`Código en el principal`
+
+```cpp
+ // controla el brazo
+  if (ultrasonico.dondeEsta == 0) dedo.levantar();
+  else dedo.bajar();
+```
+
+### Código que recibe, en Arduino IDE
 
 Luego, en el código que recibe. El arduino lee estos valores y procede a mover el servomotor, cuando llegue a un ángulo límite, se prende una luz amarilla.
 
