@@ -57,6 +57,8 @@ Para mi investigación sobre un actuador, quise buscar información sobre algo d
 
 ![speaker](./imagenes/speaker.JPG)
 
+**Imagen 3** fuente: [Amazon](https://www.amazon.co.uk/Gikfun-Speaker-Diameter-Arduino-Speakers/dp/B07DJ9X5T6)
+
 
 
 ## Bibliografía
