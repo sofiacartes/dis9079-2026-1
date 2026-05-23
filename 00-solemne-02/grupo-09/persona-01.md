@@ -18,6 +18,8 @@ Investigando me encontre con el trabajo de Atau Tanaka, un artista e investigado
 
 Tanaka usa los sensores EMG en los musculos del antebrazo para crear sonidos basados en sus gestos.
 
+![myogram](./imagenes/myogram.png) 
+
 [Myogram 2015](<https://youtu.be/G6H1J2k--5I?si=SgvoB-oUE9kfy_j1>)
 
 ## Actuador
