@@ -91,7 +91,14 @@ La interacción ocurre en tiempo real ya que el espectador modifica el comportam
 * Manejo de animaciones - Permite comprender cómo funcionan los frames, actualización de píxeles y secuencias visuales.
 * Integración con sensores y actuadores - La OLED puede mostrar información proveniente de sensores PIR.
 #### Sobre el proyecto 
-Se utilizó una pantalla OLED como actuador junto a un push button para controlar la visualización de información. El funcionamiento del sistema consistía en que, al presionar el botón se activaba el envío de datos hacia la pantalla OLED, la cual mostraba la información recibida desde el sistema Adafruit desde el sensor PIR. El push button decidía como un controlador ya que al apretarlo se visualiza los datos en la pantalla y si no se presionaba esta pantalla no recibe información.
+Se utilizó una pantalla OLED como actuador junto a un push button para controlar la visualización de información. El funcionamiento del sistema consistía en que, al presionar el botón se activaba el envío de datos hacia la pantalla OLED, la cual mostraba la información recibida desde Adafruit IO desde el sensor PIR. El push button funcionaba como un controlador ya que al apretarlo se visualizaban los datos en la pantalla y si no se presionaba esta pantalla no recibía información.
+
+Una dificultad en este momento fue realizar que las animaciones se lograran interpretar en la pantalla ya que al principio teníamos códigos muy largos y la pantalla no los reconoció, gracias a image2CPP vimos bien el tamaño de la pantalla donde descubrimos que el problema de que porque no funcionaba el código anterior era porque era demasiado grande la imagen de los frames, partimos investigando con fuentes que veian pantallas OLED y como se creaban imágenes en Image2CPP.
+
+![pruebas](imagenes/pruebas2.jpeg)
+
+
+### Referente artístico: 
 
 
 
