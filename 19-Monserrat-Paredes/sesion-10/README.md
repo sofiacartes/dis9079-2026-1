@@ -7,8 +7,9 @@ solemne 2
 
 ## Apuntes en clases
 
-- Sensores: Dispositivo diseñado para detectar cambios en el entorno.
-- Actuadores: Dispositivo que recibe una orden o señal.
+Sensores: Dispositivo diseñado para detectar cambios en el entorno.
+
+Actuadores: Dispositivo que recibe una orden o señal.
 
 Lo que queremos realizar en la solemne 2 es que desde la Raspberry pi envíe datos de un botón on/off  hacia el Arduino
 y que este encienda una luz o emita algún sonido.
