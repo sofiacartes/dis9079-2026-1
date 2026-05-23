@@ -72,7 +72,7 @@ Finalmente, conseguimos que el GIF funcionara correctamente y se reprodujera com
 
 ## Código usado para enviar
 
-```cpp
+```python
 import time
 import board
 import digitalio
