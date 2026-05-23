@@ -1,6 +1,6 @@
 # investigaciones individuales
 
-nombre completo / github
+Anays Cornejo - [Anaysval](https://github.com/Anaysval)
 
 ## Sensor
 
