@@ -51,6 +51,8 @@ La pantalla OLED funciona mediante comunicación digital (generalmente protocolo
 
 Con el sensor PIR tuvimos varios problemas. Trabajamos con dos modelos distintos: uno que venía con cables integrados y otro sin ellos. Por lo que investigamos, el que tenía cables estaba modificado. El sensor con cables integrados nunca logró funcionar correctamente, incluso después de probar distintos códigos y configuraciones.
 
+![sensores](imagenes/sensores.png)
+
 Finalmente cambiamos al otro sensor, y ahí el sistema comenzó a responder, aunque no de la manera que esperábamos. Lo más difícil fue calibrar la sensibilidad, ya que el sensor detectaba movimiento con cambios mínimos en el entorno.
 
 Investigando sobre su funcionamiento, descubrimos que el sensor cuenta con dos reguladores. Uno controla la sensibilidad: mientras más alto está ajustado, más sensible es el sensor; y mientras más bajo, menos sensible se vuelve. El segundo regulador controla el tiempo que la señal permanece activada: si está alto, la salida se mantiene en estado HIGH por más tiempo, y si está bajo, vuelve más rápido al estado LOW.
