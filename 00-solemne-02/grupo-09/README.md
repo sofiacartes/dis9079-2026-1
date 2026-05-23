@@ -67,7 +67,13 @@ Error:
 Así que le preguntamos a Claude que significaba ese error y nos dijo que el error se encontraba en  mqtt.loop() porque el broker corta la conexión por inactividad, también teníamos otro problema que era:
 
 MMQTTException: (‘Connection Refused - Unauthorized’, 5)
+
+<img src="./imagenes/errorindentacion.jpeg " alt="install" width="500">
+
 Resulta que el problema era que el nombre de adafruit “Kaiikou” estaba escrito en minúscula y lo cambiamos y ahí funcionó, el botón funcionaba para detener el envío de información cuando era enviada.
+
+<img src="./imagenes/prueba.gif " alt="install" width="500">
+
 
 
 
@@ -381,6 +387,8 @@ void loop() {
 ## Imágenes del proyecto
 
 ## Animaciones del proyecto
+
+
 
 ## Bibliografía
 https://eepower.com/resistor-guide/resistor-types/potentiometer/#
