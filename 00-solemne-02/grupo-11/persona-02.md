@@ -1,7 +1,6 @@
 # investigaciones individuales
 
 Antonella Lavalle / antolavalle
-Martina Alegría Coloma/ AlegriaColoma
 
 En lo personal durante el proceso me senti super frustrada al no comprender del todo lo que estaba haciendo, creo que aun no lo comprendo pero comprendo un poco lo que hicimos durante la solemne.
 
@@ -17,7 +16,6 @@ Para usarlo hay que conectar cuatro pines: alimentación, tierra, uno para dispa
 
 La fórmula que se usa en el código es simplemente dividir la duración del Echo entre 58 para obtener centímetros, o entre 148 para pulgadas. Es uno de los sensores más fáciles de implementar, lo que lo hace muy popular en proyectos de electrónica y robótica.
 
-
 ## Filtrado de información
 
 El problema con el HC-SR04 es que las lecturas crudas son bastante ruidosas. Aunque el objeto esté completamente quieto, la distancia que reporta el sensor varía un poco en cada medición. Para trabajar con datos confiables hay que aplicar algún tipo de filtro.
@@ -28,13 +26,11 @@ También existe el filtro EMA, que da más peso a las lecturas recientes y menos
 
 En la práctica casi siempre se combinan dos o tres de estas técnicas para obtener un resultado limpio.
 
-
 ## Visualización de datos
 
 Dependiendo del proyecto hay varias formas de visualizar lo que mide el sensor. La más inmediata es el Serial Plotter que trae el Arduino IDE, que grafica la distancia en tiempo real sin necesidad de instalar nada extra. Para análisis más detallados, Python con matplotlib permite ver el historial de lecturas y comparar los datos con y sin filtro, lo que ayuda mucho a entender cómo se comporta el sensor y a ajustar los parámetros.
 
 Para proyectos más visuales o interactivos, p5.js es una buena opción porque permite crear gráficos en el navegador: círculos que crecen o se achican según la distancia, colores que cambian, barras de proximidad. Y si se quiere algo más elaborado, se puede montar un pequeño servidor con Flask o Node.js y mostrar los datos en un dashboard accesible desde cualquier dispositivo conectado a la red local.
-
 
 ## Problemas comunes
 
@@ -46,7 +42,6 @@ También hay que tener cuidado con los ecos múltiples en espacios cerrados o co
 
 Un error clásico cuando uno recién empieza es medir demasiado rápido. Si se hacen lecturas con menos de 60 ms de separación, el sensor puede confundir el eco de una medición con el de la siguiente. Y por último, materiales blandos como telas o espumas simplemente absorben las ondas en lugar de reflejarlas, así que el sensor no los detecta bien. Para esos casos hay que usar otro tipo de sensor.
 
-
 ## Obras, proyectos y empresas
 
 Myron Krueger es uno de los referentes más importantes del arte interactivo y fue pionero en usar sensores de proximidad con ese fin. Desde los años 70, su instalación Videoplace permitía que los movimientos del cuerpo del espectador generaran imágenes y sonidos en tiempo real. No había ningún control físico, el cuerpo entero era la interfaz. Esa idea anticipó décadas antes todo lo que hoy conocemos como arte reactivo o instalaciones inmersivas.
@@ -54,7 +49,6 @@ Myron Krueger es uno de los referentes más importantes del arte interactivo y f
 <img width="320" height="247" alt="Sistema Videoplace" src="https://github.com/user-attachments/assets/34750281-6994-4faf-b879-7571951e9dab" />
 
 <img width="714" height="475" alt="videoplace_espacios" src="https://github.com/user-attachments/assets/a74b65cc-ff01-447d-a9b0-d2681a8db4c0" />
-
 
 En el ámbito industrial, los robots de almacén de Amazon usan este mismo principio, aunque con sensores mucho más sofisticados, para navegar entre estanterías, evitar personas y coordinarse con otros robots sin chocar. Y el sensor de reversa de cualquier auto moderno también funciona con ultrasonido, solo que fabricado a escala industrial por empresas como Bosch o Continental. Es básicamente el mismo principio del HC-SR04 pero empaquetado para aguantar lluvia, polvo y temperaturas extremas.
 
@@ -81,11 +75,11 @@ Existen 12 tipos de sensores, que miden y detectan distintos tipos de variables
 * Sensores ópticos
 * Sensores magneticos
 
-### Potenciómetro 
+### Potenciómetro
 
 Un potenciómetro es un componente electrónico que funciona como resistor variable de tres terminales: dos fijos y uno móvil denominado "cursor" o wiper. Al girar o deslizar su perilla, el cursor se desplaza sobre una pista resistiva, modificando el valor de la resistencia entre los terminales y permitiendo así controlar y regular tanto la caída de voltaje como la intensidad de la corriente dentro de un circuito eléctrico, dependiendo del tipo de aplicación.
 
-#### Aplicaciones del potenciómetro 
+#### Aplicaciones del potenciómetro
 
 * Control de volumen en equipos de sonido: Al girar el potenciómetro, se ajusta la amplitud de la señal de audio, permitiendo incrementar o disminuir el volumen.
   
@@ -101,12 +95,12 @@ El potenciómetro es uno de los componentes más versátiles y utilizados en la 
 
 #### Posibles fallas
 
-- Fallo de rotación: esto suele deberse al desgaste de la resistencia, lo que da como resultado un mal contacto entre el contacto móvil y la resistencia
-- Fallo de pines y resistencias: cuando el potenciómetro se rompe dentro del pin, se producirá un fenómeno en el que el potenciómetro no funcionará, es decir, no habrá cambios en la corriente o el voltaje del circuito cuando se gire el eje giratorio.
-- Problemas de funcionamiento: si la tuerca de fijación está demasiado apretada, puede provocar que el eje del potenciómetro no gire. Además, si la perilla tiene demasiada fuerza, también puede dañar el potenciómetro.
-- Mal contacto: esto puede ser causado por polvo o suciedad y se puede solucionar con controles de limpieza.
+* Fallo de rotación: esto suele deberse al desgaste de la resistencia, lo que da como resultado un mal contacto entre el contacto móvil y la resistencia
+* Fallo de pines y resistencias: cuando el potenciómetro se rompe dentro del pin, se producirá un fenómeno en el que el potenciómetro no funcionará, es decir, no habrá cambios en la corriente o el voltaje del circuito cuando se gire el eje giratorio.
+* Problemas de funcionamiento: si la tuerca de fijación está demasiado apretada, puede provocar que el eje del potenciómetro no gire. Además, si la perilla tiene demasiada fuerza, también puede dañar el potenciómetro.
+* Mal contacto: esto puede ser causado por polvo o suciedad y se puede solucionar con controles de limpieza.
 
-#### Moog Music 
+#### Moog Music
 
 El Minimoog Model D fue el primer sintetizador portátil del mundo y convirtió a Moog en un nombre conocido en la industria musical, gracias a artistas como Herbie Hancock, Kraftwerk, Gary Numan y Rick Wakeman.
 
@@ -128,20 +122,17 @@ Internamente tiene tres cosas: un motor DC pequeño, una caja reductora de engra
 
 La comunicación con el microcontrolador se hace mediante PWM (modulación por ancho de pulso). Se envía una señal que se repite cada 20 ms, y la duración del pulso dentro de ese ciclo le dice al servo a qué ángulo moverse: un pulso de 1 ms corresponde a 0 grados, uno de 1.5 ms a 90 grados, y uno de 2 ms a 180 grados. El servo tiene un rango de movimiento de 180 grados en total y tres cables: alimentación (rojo), tierra (marrón o negro) y señal (naranja o amarillo).
 
-
 ## Control de la señal
 
 El equivalente al filtrado en un sensor es el control de la señal de salida en un actuador. Si se le manda al servo posiciones que saltan bruscamente de 0 a 180 grados, el movimiento es violento, los engranajes se fuerzan y la estructura mecánica vibra. Para evitar eso hay distintas técnicas.
 
 La más simple es el barrido gradual: en lugar de enviar directamente el ángulo destino, se incrementa el ángulo de a poco en cada ciclo del loop hasta llegar al valor deseado. Eso suaviza el movimiento considerablemente. Una versión más sofisticada es la interpolación, donde se calcula una trayectoria suave entre la posición actual y la destino usando una curva en lugar de una línea recta, lo que genera movimientos que aceleran al inicio y frenan al final, mucho más naturales. También se puede limitar la velocidad máxima de cambio, es decir, definir cuántos grados por segundo puede moverse el servo como máximo, independientemente de lo que pida el código. Esto protege tanto al servo como a lo que esté unido mecánicamente.
 
-
 ## Visualización de datos
 
 Con un servo la visualización es un poco diferente que con un sensor, porque lo interesante no es tanto graficar datos sino visualizar el estado y el comportamiento del actuador. Lo más útil en desarrollo es mostrar en tiempo real el ángulo actual, el ángulo objetivo y la diferencia entre ambos, lo que permite detectar si el servo está llegando bien a la posición o si hay algo que lo está frenando.
 
 En proyectos más elaborados se pueden graficar trayectorias de movimiento para ver si el servo sigue el perfil esperado o si hay oscilaciones y vibraciones. Processing y p5.js son buenas herramientas para esto porque permiten dibujar un brazo virtual que refleja el movimiento real del servo, lo que es muy útil para depurar sin tener que mirar el hardware todo el tiempo. Para proyectos con varios servos, como un brazo robótico, visualizar todos los ángulos simultáneamente en un dashboard ayuda a entender cómo interactúan entre sí.
-
 
 ## Problemas comunes
 
@@ -152,7 +143,6 @@ Otro error clásico es no definir bien los límites del rango. Aunque el servo d
 El zumbido constante es algo que desconcierta bastante al principio. Si el servo emite un zumbido aunque no esté moviéndose, generalmente significa que está recibiendo una señal PWM con algo de ruido o que está intentando mantener una posición contra una carga que lo empuja. En el primer caso ayuda usar la función detach() de la librería Servo de Arduino para dejar de enviar la señal cuando no se necesita movimiento. En el segundo caso hay que revisar el diseño mecánico.
 
 Por último los engranajes de plástico del SG90 son su punto más débil. No está diseñado para cargas laterales ni para ser forzado manualmente cuando está energizado. Para aplicaciones con más peso o esfuerzo mecánico hay que subir a servos con engranajes metálicos como el MG90S o similares.
-
 
 ## Obras, proyectos y empresas
 
@@ -172,15 +162,15 @@ El colectivo japonés teamLab usa servos y motores en muchas de sus instalacione
 
 El servo SG90 Tower Pro es un micro servo de alta calidad y tamaño compacto, ideal para proyectos de robótica, aeromodelismo y automatización. Su bajo consumo lo hace perfecto para aprendizaje y prototipado, permitiendo su uso directo con placas Arduino o similares alimentadas por USB.
 
-- Definición de servomotor : Un servomotor se define como un motor eléctrico que proporciona un control preciso de la posición angular o lineal, la velocidad y el par mediante un sistema de bucle de retroalimentación.
+* Definición de servomotor : Un servomotor se define como un motor eléctrico que proporciona un control preciso de la posición angular o lineal, la velocidad y el par mediante un sistema de bucle de retroalimentación.
 
-- Sistemas de control : El servomotor utiliza sistemas de control avanzados como PID y lógica difusa para ajustar el movimiento según las señales de entrada y retroalimentación para un rendimiento óptimo.
+* Sistemas de control : El servomotor utiliza sistemas de control avanzados como PID y lógica difusa para ajustar el movimiento según las señales de entrada y retroalimentación para un rendimiento óptimo.
 
-- Tipos de motores : Existen diferentes tipos, como los servomotores de CA y CC, con subtipos como síncronos, asíncronos, con escobillas y sin escobillas, cada uno adaptado a aplicaciones específicas.
+* Tipos de motores : Existen diferentes tipos, como los servomotores de CA y CC, con subtipos como síncronos, asíncronos, con escobillas y sin escobillas, cada uno adaptado a aplicaciones específicas.
 
-- Mecanismo de retroalimentación : El uso eficaz de sensores como potenciómetros y codificadores ayuda a monitorizar y ajustar con precisión la posición, la velocidad o el par del motor.
+* Mecanismo de retroalimentación : El uso eficaz de sensores como potenciómetros y codificadores ayuda a monitorizar y ajustar con precisión la posición, la velocidad o el par del motor.
 
-- Información sobre aplicaciones : Los servomotores son fundamentales en campos de alta precisión como la robótica, la maquinaria CNC y la fabricación automatizada, por su capacidad para manejar movimientos y tareas complejas.
+* Información sobre aplicaciones : Los servomotores son fundamentales en campos de alta precisión como la robótica, la maquinaria CNC y la fabricación automatizada, por su capacidad para manejar movimientos y tareas complejas.
 
 #### Posibles fallas
 
@@ -220,11 +210,11 @@ McRoberts, M. (2013). Beginning Arduino (2.ª ed.). Apress.
 
 McRoberts, M. (2014). Arduino básico. Anaya Multimedia.
 
-Parallax Inc. (s.f.). Servo motor control with PWM. Recuperado de https://learn.parallax.com/tutorials/robot/shield-bot/robotics-board-education-shield-arduino/chapter-6-servo-1
+Parallax Inc. (s.f.). Servo motor control with PWM. Recuperado de <https://learn.parallax.com/tutorials/robot/shield-bot/robotics-board-education-shield-arduino/chapter-6-servo-1>
 
-teamLab. (s.f.). Works. Recuperado de https://www.teamlab.art/works
+teamLab. (s.f.). Works. Recuperado de <https://www.teamlab.art/works>
 
-Torre Pro. (s.f.). SG90 micro servo datasheet. Recuperado de http://www.towerpro.com.tw/product/sg90-7
+Torre Pro. (s.f.). SG90 micro servo datasheet. Recuperado de <http://www.towerpro.com.tw/product/sg90-7>
 
 Torrente Artero, Ó. (2013). Arduino: Curso práctico de formación. RC Libros.
 
@@ -232,26 +222,26 @@ Herzog, L., Jansen, T. y Weschler, L. (2014). Strandbeest: The dream machines of
 
 Krueger, M. W. (1983). Artificial reality. Addison-Wesley.
 
-Li, J. y Liu, H. (2016). Design optimization of Amazon robotics. Automation, Control and Intelligent Systems, 4(2), 48–52. https://doi.org/10.11648/j.acis.20160402.17
+Li, J. y Liu, H. (2016). Design optimization of Amazon robotics. Automation, Control and Intelligent Systems, 4(2), 48–52. <https://doi.org/10.11648/j.acis.20160402.17>
 
-teamLab. (s.f.). Works. Recuperado de https://www.teamlab.art/es/art/
+teamLab. (s.f.). Works. Recuperado de <https://www.teamlab.art/es/art/>
 
-Arduino Team. 2019. *Three dozen servos create animated artwork* https://blog.arduino.cc/2019/09/06/three-dozen-servos-create-animated-artwork/
+Arduino Team. 2019. *Three dozen servos create animated artwork* <https://blog.arduino.cc/2019/09/06/three-dozen-servos-create-animated-artwork/>
 
-Columna de Zhihu. 2024. *¿Cúales son los fallos más comunes del potenciómetro giratorio?* https://es.alltrans-sensor.com/news/what-are-the-common-faults-of-rotating-potenti-79615642.html
+Columna de Zhihu. 2024. *¿Cúales son los fallos más comunes del potenciómetro giratorio?* <https://es.alltrans-sensor.com/news/what-are-the-common-faults-of-rotating-potenti-79615642.html>
 
-Doug Domke. 2019. *Servo Motor Artwork* https://www.hackster.io/doug-domke/servo-motor-artwork-79e2d3
+Doug Domke. 2019. *Servo Motor Artwork* <https://www.hackster.io/doug-domke/servo-motor-artwork-79e2d3>
 
-Fumo,D. Noviembre, 2022. *Moog’s Minimoog Model D Reissue Revives a Classic Synth With Vintage Soul and Modern Updates* https://vintageking.com/blog/moog-minimoog-model-d-reissue/
+Fumo,D. Noviembre, 2022. *Moog’s Minimoog Model D Reissue Revives a Classic Synth With Vintage Soul and Modern Updates* <https://vintageking.com/blog/moog-minimoog-model-d-reissue/>
 
-KPower. Enero, 2026 *The Mighty Micro: How the 9g SG90 Servo Motor Powers Creativity and Precision* https://www.kpower.com/blog/3235.html
+KPower. Enero, 2026 *The Mighty Micro: How the 9g SG90 Servo Motor Powers Creativity and Precision* <https://www.kpower.com/blog/3235.html>
 
-Osaka electronics. 2024. *¿Qué es un potenciómetro?* https://osakaelectronicsltda.com/blog/biblioteca/que-es-un-potenciometro
+Osaka electronics. 2024. *¿Qué es un potenciómetro?* <https://osakaelectronicsltda.com/blog/biblioteca/que-es-un-potenciometro>
 
-Ruiz, L. Abril, 2026. *Los 12 tipos de sensores: sus características y funciones*. https://psicologiaymente.com/miscelanea/tipos-de-sensores
+Ruiz, L. Abril, 2026. *Los 12 tipos de sensores: sus características y funciones*. <https://psicologiaymente.com/miscelanea/tipos-de-sensores>
 
-Wikipedia. SF. *Potenciómetro* https://es.wikipedia.org/wiki/Potenci%C3%B3metro
+Wikipedia. SF. *Potenciómetro* <https://es.wikipedia.org/wiki/Potenci%C3%B3metro>
 
-Zaitronics. Enero, 2026 *SG90 Servo Arduino Tutorial: Wiring, Code & Troubleshooting Guide* https://zaitronics.com.au/blogs/guides/sg90-servo-arduino-guide
+Zaitronics. Enero, 2026 *SG90 Servo Arduino Tutorial: Wiring, Code & Troubleshooting Guide* <https://zaitronics.com.au/blogs/guides/sg90-servo-arduino-guide>
 
-Consultada en Mayo de 2026. https://claude.ai/chat/2cac5ff0-ddce-4e17-8b73-aea8bf90c3be
+Consultada en Mayo de 2026. <https://claude.ai/chat/2cac5ff0-ddce-4e17-8b73-aea8bf90c3be>

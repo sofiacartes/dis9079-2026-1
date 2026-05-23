@@ -85,4 +85,90 @@ No encontré más información sobre la instalación Made to Measure del estudio
 
 ## Actuador
 
+### Pistón electromecánico
+
+### ¿Qué es un pistón electromecánico?
+
+Un actuador electromecánico es un dispositivo electrónico que convierte energía eléctrica en movimiento físico. En este caso, el pistón electromecánico (lineal) es un tipo de actuador que genera movimiento en línea recta, es decir, empuja o retrae un eje.
+
+Estos actuadores se utilizan principalmente para mover objetos de forma automática y controlada. Son precisos, pueden soportar carga y permiten repetir movimientos muchas veces sin intervención manual constante.
+
+También se conocen como actuadores lineales, pistones eléctricos o sistemas de movimiento lineal automatizado.
+
+### Uso del pistón electromecánico
+
+El actuador electromecánico funciona cuando recibe una señal eléctrica que activa su motor interno. Ese motor transforma la energía eléctrica en movimiento mecánico lineal.
+
+Se utiliza principalmente en:
+
+- robótica
+- automatización de sistemas
+- mecanismos de elevación
+- movimiento controlado de objetos
+-sistemas mecánicos interactivos
+
+### Filtrado de información
+
+El actuador puede presentar errores o fallas si no se controla correctamente, por lo que se deben considerar ciertos factores para su buen funcionamiento.
+
+Los principales problemas que afectan su rendimiento son:
+
+- sobrecarga del peso que debe mover
+- desgaste mecánico por uso continuo
+- errores de calibración del movimiento
+- variación en la potencia eléctrica
+
+Para mejorar su funcionamiento se utilizan:
+
+- control preciso de la señal eléctrica
+- calibración del recorrido del pistón
+- regulación de la carga mecánica
+- mantenimiento periódico
+- Visualización de datos
+
+Los actuadores no muestran datos directamente, pero convierten información digital en movimiento físico.
+
+Esto se realiza mediante:
+
+- señales eléctricas enviadas desde un sistema de control
+- programación de movimientos específicos
+- conversión de datos en acción mecánica (ej: subir, bajar o mantener posición)
+
+### Problemas comunes
+
+El actuador electromecánico puede presentar distintos problemas durante su uso.
+
+Los más frecuentes son:
+
+- desgaste de engranajes internos
+- sobrecalentamiento del motor
+- pérdida de precisión con el tiempo
+- ruido mecánico durante el funcionamiento
+- fallos si recibe cargas mayores a las recomendadas
+
+### Información importante adicional
+
+- Tiene alta precisión en movimientos lineales
+- Permite automatización sin intervención humana
+- Puede funcionar con microcontroladores (Arduino, PLC, etc.)
+- Su velocidad depende del voltaje y la carga aplicada
+- Es más silencioso que sistemas hidráulicos en algunos casos
+- Su vida útil depende del uso y mantenimiento
+
+### Ventajas y desventajas
+
+Ventajas:
+
+- control preciso del movimiento
+- fácil integración con sistemas electrónicos
+- bajo mantenimiento comparado con sistemas hidráulicos
+- repetición de movimientos sin fatiga humana
+
+Desventajas:
+
+- fuerza limitada según el modelo
+- puede sobrecalentarse con uso continuo
+- depende totalmente de energía eléctrica
+-desgaste mecánico interno con el tiempo
+
 ## Bibliografía
