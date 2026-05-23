@@ -37,8 +37,22 @@ Me llamó la atención el concepto de "rebote" ya que lo ví en hartos lados a m
 
 Cuando presionamos un botón, un interruptor de palanca o un microinterruptor, dos partes metálicas entran en contacto para cortar el suministro. Pero no se conectan instantáneamente, sino que las partes metálicas se conectan y desconectan varias veces antes de que se realice la conexión estable real. Lo mismo sucede al soltar el botón. Esto da como resultado la activación falsa o activación múltiple, como si se presionara el botón varias veces. Es como caer una pelota que rebota desde una altura y sigue rebotando en la superficie, hasta que se detiene.
 
+![boton](./imagenes/botonRebote.JPG)
+
+**Imagen 02** *Diagrama de Switch Bounce*
+
+Simplemente, podemos decir que el rebote del interruptor es el comportamiento no ideal de cualquier interruptor que genera múltiples transiciones de una sola entrada. El rebote del interruptor no es un problema importante cuando nos ocupamos de los circuitos de potencia, pero causa problemas mientras tratamos con los circuitos lógicos o digitales. Por lo tanto, para eliminar el rebote del circuito , se utiliza el circuito de rebote del interruptor.
+
+**El rebote también puede ocurrir en Software, cómo?**
+
+El rebote también ocurre en el software, mientras que los programadores de programación agregan retrasos para eliminar el rebote del software. Agregar un retraso fuerza al controlador a detenerse durante un período de tiempo en particular, pero agregar retrasos no es una buena opción en el programa, ya que pausa el programa y aumenta el tiempo de procesamiento. La mejor forma es utilizar interrupciones en el código para el rebote del software. Arduino tiene un código para evitar que el software rebote.
+
+*Info sacada de [es-amentechnologies](https://es.amen-technologies.com/what-is-switch-bouncing)
+
 ## Actuador
 
 ## Bibliografía
 
 [unitelectronics](https://uelectronics.com/producto/push-button-4-pines-microswitch/)
+
+[es-amentechnologies](https://es.amen-technologies.com/what-is-switch-bouncing)
