@@ -6,6 +6,8 @@ Anays Cornejo - [Anaysval](https://github.com/Anaysval)
 
 ### Sensor PIR 
 
+![foto](./imagenes/1ola.jpg) 
+
 ### ¿Qué es un sensor PIR?
 
 Un sensor PIR (Passive Infrared Sensor) es un dispositivo electrónico que detecta movimiento mediante cambios en la radiación infrarroja emitida por personas, animales u objetos calientes. 
@@ -68,6 +70,8 @@ Los más frecuentes son:
 
 ### Made to Measure 
 
+![foto](./imagenes/1obra.jpg)
+
 La instalación Made to Measure del estudio Process Studio es una obra de arte interactivo donde el espacio responde a la presencia del público mediante sensores de movimiento instalados en el techo. Según la documentación oficial del proyecto, la obra utiliza 15 sensores PIR para detectar la presencia y el desplazamiento de los visitantes dentro de la sala.
 
 “Al acercarse a los objetos expuestos o al caminar por la sala, el visitante activaba 15 sensores de movimiento montados en el techo, activando bucles en 8 altavoces diferentes y el parpadeo o conmutación de 5 tubos de neón. Dependiendo de las acciones de los visitantes, surgieron diferentes paisajes sonoros y situaciones de iluminación.” (Process Studio, n.d.) 
@@ -86,6 +90,8 @@ No encontré más información sobre la instalación Made to Measure del estudio
 ## Actuador
 
 ### Pistón electromecánico
+
+![foto](./imagenes/2ola.jpg) 
 
 ### ¿Qué es un pistón electromecánico?
 
@@ -174,6 +180,10 @@ Desventajas:
 ### Obra
 
 ### Wavefunction / Subsculpture 9 – Rafael Lozano-Hemmer (UMMA)  
+
+![foto](./imagenes/giff.gif) 
+
+![foto](./imagenes/2obra.jpg) 
 
 Rafael Lozano-Hemmer es un artista contemporáneo mexicano-canadiense nacido en 1967 en Ciudad de México. Su trabajo se enfoca en la creación de instalaciones interactivas que combinan arte, tecnología y participación del público. Sus obras utilizan sistemas computacionales, sensores y mecanismos automatizados para generar experiencias donde el espectador es parte activa de la obra 
 
