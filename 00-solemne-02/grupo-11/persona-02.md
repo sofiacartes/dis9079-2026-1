@@ -99,7 +99,11 @@ La lista de materiales es completamente accesible y económica: un Arduino Uno, 
 
 Pocos proyectos de Arduino usan servomotores de una manera tan interesante como esta pieza de arte electrónico, que incluso con solo 36 servos produce efectos visuales notables. El blog oficial de Arduino lo destacó como referencia en su categoría, validando su valor como obra que cruza la frontera entre la electrónica maker y el arte cinético interactivo. Además, Domke tiene otros proyectos similares, incluyendo un reloj de palabras controlado por 114 servomotores, lo que muestra una línea de trabajo artístico consistente centrada en el SG90 como herramienta expresiva.
 
+<img width="900" height="675" alt="image" src="https://github.com/user-attachments/assets/22691394-8db0-4514-af59-d9b8cab687e6" />
+
 ## Bibliografía
+
+Arduino Team. 2019. *Three dozen servos create animated artwork* https://blog.arduino.cc/2019/09/06/three-dozen-servos-create-animated-artwork/
 
 Columna de Zhihu. 2024. *¿Cúales son los fallos más comunes del potenciómetro giratorio?* https://es.alltrans-sensor.com/news/what-are-the-common-faults-of-rotating-potenti-79615642.html
 
@@ -113,9 +117,8 @@ Osaka electronics. 2024. *¿Qué es un potenciómetro?* https://osakaelectronics
 
 Ruiz, L. Abril, 2026. *Los 12 tipos de sensores: sus características y funciones*. https://psicologiaymente.com/miscelanea/tipos-de-sensores
 
-https://es.wikipedia.org/wiki/Potenci%C3%B3metro
-
-https://www.guitarcenter.com/Moog/Minimoog-Model-D-Monophonic-Analog-Synthesizer-2022-Reissue-Dark-Cherry-1500000387653.gc
+Wikipedia. SF. *Potenciómetro* https://es.wikipedia.org/wiki/Potenci%C3%B3metro
 
 Zaitronics. Enero, 2026 *SG90 Servo Arduino Tutorial: Wiring, Code & Troubleshooting Guide* https://zaitronics.com.au/blogs/guides/sg90-servo-arduino-guide
 
+Consultada en Mayo de 2026. https://claude.ai/chat/2cac5ff0-ddce-4e17-8b73-aea8bf90c3be
