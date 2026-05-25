@@ -242,7 +242,7 @@ import adafruit_minimqtt.adafruit_minimqtt as MQTT
 
 # conexión a wifi
 SSID = "si"
-PASSWORD = "mailo6192."
+PASSWORD = "mailo-6192"
 
 print("Conectando WiFi...")
 wifi.radio.connect(
@@ -305,7 +305,7 @@ while True:
 
 // conexión a wifi
 #define WLAN_SSID "si"
-#define WLAN_PASS "mailo6192."
+#define WLAN_PASS "mailo-6192"
 
 // conexión al adafruit io
 #define AIO_SERVER     "io.adafruit.com"

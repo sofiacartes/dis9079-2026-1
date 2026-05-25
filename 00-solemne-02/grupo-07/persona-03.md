@@ -4,7 +4,7 @@ Agustina Aceituno / [agustinaaceituno](https://github.com/agustinaaceituno)
 
 ## Sensor
 Un sensor es un dispositivo electrónico capaz de detectar cambios en el entorno físico y convertirlos en señales que pueden ser interpretadas por un microcontrolador, como un Arduino o una Raspberry Pi Pico. Los sensores permiten medir variables como temperatura, luz, distancia, sonido, movimiento, humedad o presión.
-### Sensor LDR - aprendido en clase
+## Sensor LDR - aprendido en clase
 Se llama así ya que Light Dependent Resistor, significa que es un sensor que cambia su valor dependiendo de la cantidad de luz que recibe. Funciona a base de la fotoconductividad que es la propiedad de ciertos materiales de aumentar su conductividad eléctrica al exponerse a la luz. Esto permite transformar cambios de iluminación en señales eléctricas que pueden ser interpretadas por un microcontrolador.
 #### Funcionamiento básico:
 * El LDR detecta la luz.
@@ -32,7 +32,7 @@ El proyecto demuestra cómo un dato de luz simple puede transformarse en interac
 ![referente](imagenes/referentemarco.jpg)
 ![referente](imagenes/referentemarco1.jpg)
 
-### Sensor PIR -  utilizado solemne
+## Sensor PIR -  utilizado solemne
 Su función es detectar movimiento a partir de las variaciones presentes en el entorno, especialmente el calor emitido por el cuerpo humano. El sensor identifica estos cambios térmicos mediante elementos piroeléctricos y los convierte en señales eléctricas que luego pueden ser procesadas e interpretadas por un microcontrolador.
 #### Funcionamiento básico:
 * El sensor PIR detecta movimiento o presencia.
@@ -68,7 +68,7 @@ La interacción ocurre en tiempo real ya que el espectador modifica el comportam
 ![proyecto](imagenes/referentesurface.png)
 ![proyecto](imagenes/referentesurface1.png)
 
-### Pantalla OLED 
+## Pantalla OLED 
 #### Funcionamiento básico
 * El microcontrolador envía información a la pantalla.
 * La pantalla interpreta los datos.

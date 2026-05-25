@@ -64,6 +64,7 @@ Investigación del sensor: Potenciómetro B500K
 
 <img width="414" height="434" alt="sensorPotenciómetro" src="https://github.com/user-attachments/assets/c62d049b-a491-4db0-8a17-3d5d3ed09a3b" />
 
+Imagen sacada de https://afel.cl/products/potenciometro-500k-ohm?_pos=4&_psq=pote&_ss=e&_v=1.0
 
 ### ¿Qué es un potenciómetro?
 
@@ -255,6 +256,7 @@ El uso de potenciómetros permite manipular sonido en tiempo real de forma corpo
 
 <img width="579" height="123" alt="ARKeytar03" src="https://github.com/user-attachments/assets/659c881e-3cdc-4508-a9be-71cadded17fa" />
 
+Imagenes sacadas de https://projecthub.arduino.cc/andreagregorini/arkeytar-arduino-based-midi-controller-keytar-45b72d
 
 ---
 
@@ -264,6 +266,8 @@ Investigación Actuador: Servomotor SG90
 
 
 <img width="700" height="688" alt="ServoMotor" src="https://github.com/user-attachments/assets/03161dfa-04ff-409a-b512-b08a26b9ecae" />
+
+Imagen sacada de https://arduino.cl/producto/micro-servo-motor-sg90-9g/ 
 
 
 ### ¿Qué es un actuador?
@@ -494,6 +498,7 @@ El movimiento generado por los SG90 hace que el robot parezca “vivo” y cerca
 
 <img width="555" height="549" alt="Joy Robot02" src="https://github.com/user-attachments/assets/5aa09049-7a3b-4d7f-8cc2-06862e18f855" />
 
+Imagenes sacadas de https://www.hackster.io/igorF2/joy-robot-robo-da-alegria-bba54f 
 
 
 ## Código que envía, en Raspberry PI Pico 2 W
