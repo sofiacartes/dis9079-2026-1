@@ -87,13 +87,16 @@ Así que le preguntamos a Claude qué significaba ese error y nos dijo que el pr
 
 Resultó que el problema era que el nombre de usuario de Adafruit, "Kaiikou", estaba escrito en minúscula. Lo corregimos y ahí funcionó: el botón detenía el envío de información cuando era presionado.
 
-<img src="./imagenes/prueba.gif" alt="install" width="500">
+<img src="./imagenes/botonpresionado.jpeg " alt="install" width="500">
 
-<img src="./imagenes/feedservo.jpeg" alt="install" width="500">
 
 Luego de poder integrar el botón y que funcionara en el código, decidimos darle una intención al movimiento del motor servo. Primero intentamos con un movimiento
 más rápido definiendo 3 ejes: derecha, centro e izquierda, controlando el `MOVING_TIME` y poniéndolo en 300 ms. El resultado no nos satisfizo, por lo que 
 ralentizamos el movimiento subiendo los milisegundos a 1000, y este resultado nos dejó satisfechos.
+
+<img src="./imagenes/prueba.gif" alt="install" width="500">
+
+<img src="./imagenes/feedservo.jpeg" alt="install" width="500">
 
 ## Materiales usados
 | Componente | Cantidad | Valor Unidad | Link |
