@@ -10,7 +10,7 @@
  
 Para la segunda solemne, el encargo consistió en usar microcontroladores para realizar una comunicación inalámbrica a través de Adafruit IO, usando sensores y actuadores.
  
-Para la realización de nuestro proyecto, usamos un potenciómetro conectado a una Raspberry Pi Pico 2W, que envía valores a un motor servo, el cual va conectado a un Arduino R4 WiFi. El motor servo recibe los valores y los transforma en ángulos de (agregar ángulos); además, utilizamos un botón pulsador de 4 pines que permite dejar de enviar datos para no sobrecargar la nube.
+Para la realización de nuestro proyecto, usamos un potenciómetro conectado a una Raspberry Pi Pico 2W, que envía valores a un motor servo, el cual va conectado a un Arduino R4 WiFi. El motor servo recibe los valores y los transforma en ángulos; además, utilizamos un botón pulsador de 4 pines que permite dejar de enviar datos para no sobrecargar la nube.
  
 Toda esta interacción se realiza mediante un feed de Adafruit IO.
  
@@ -100,7 +100,9 @@ presionado.
 <img src="./imagenes/prueba.gif" alt="install" width="500">
 <img src="./imagenes/feedservo.jpeg" alt="install" width="500">
 
-
+Luego de poder integrar el botón y que funcionara en el código, decidimos darle una intención al movimiento del motor servo. Primero intentamos con un movimiento
+más rápido definiendo 3 ejes: derecha, centro e izquierda, controlando el `MOVING_TIME` y poniéndolo en 300 ms. El resultado no nos satisfizo, por lo que 
+ralentizamos el movimiento subiendo los milisegundos a 1000, y este resultado nos dejó satisfechos.
 
 ## Materiales usados
 | Componente | Cantidad | Valor Unidad | Link |
