@@ -14,3 +14,5 @@ Al final resulto al encender la luz led externa
 arreglar la información grupal/ listo
 
 buscar nuevos proyectos en la parte individual
+
+## wokwi
