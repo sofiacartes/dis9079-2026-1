@@ -6,7 +6,7 @@ Isidora Andrea Pérez Maulén /  [isipm08](<https://github.com/nicolasvaldesgrev
 ## Sensor de sonido tipo KY-038 / LM393
 
 ### **¿Qué es?**
-+ El sensor de sonido KY-038 es un dispositivo electrónico diseñado para **detectar ondas sonoras** o **variaciones acústicas** del entorno y convertirlas en señales eléctricas, en donde el sonido es capaz de "viajar por el aire" en forma de vibraciones, donde el sensor capta estas vibraciones mediante un micrófono de condensador.
++ El sensor de sonido KY-038 es un dispositivo electrónico diseñado para **detectar ondas sonoras** o **variaciones acústicas** del entorno y convertirlas en señales eléctricas, en donde el sonido es capaz de "viajar por el aire" en forma de vibraciones. El sensor capta estas vibraciones mediante un micrófono de condensador.
 + Estas señales pueden ser interpretadas por un circuito, un microcontrolador o una computadora.
 + Utilizado en proyectos de robótica, domótica, instalaciones interactivas, instrumentos musicales electrónicos, sistemas de seguridad y arte multimedia.
 + Es compatible con varias placas, por ejemplo: Arduino UNO, Arduino Nano, Arduino Mega, ESP32, ESP8266 y Raspberry Pi, lo que facilita su integración en múltiples plataformas.
@@ -49,7 +49,7 @@ Isidora Andrea Pérez Maulén /  [isipm08](<https://github.com/nicolasvaldesgrev
 - Un claro y fácil ejemplo para visualizar datos es a través de un LED.
   + A mayor sonido el LED se enciende.
   + Se realizan este tipo de conexiones (sirve tanto para el sensor de sonido KY-037 y KY-038)
-  + Luego entraremos a Arduino, lo conectaremos y pondremos este código referencial;
+  + Luego entraremos a Arduino, lo conectaremos y pondremos este código referencial (adjuntado más abajo).
   + En el Monitor Serial visualizaremos el comportamiento del módulo cuando se efectúe un sonido, donde el contador varía según intensidad del sonido. (considerar en el sensor de sonido KY-038 se aumenta sensibilidad). Observando así que con un menor sonido el LED de igual forma es encendido por su mayor sensibilidad.
   
 > Tinkercad y código sacados de esta página: https://blog.uelectronics.com/tarjetas-desarrollo/uso-de-los-sensores-de-sonido-ky-038-ky-037-para-controlar-el-encendido-de-un-foco/ 
@@ -101,7 +101,11 @@ if (flanco == 4) {                      //Si el contador llega a 4, que es el va
 
 + Artista, ingeniero e investigador, interesado en las nuevas intersecciones entre el código máquina, la cultura visual y la creación crítica.
 + Aplica giros creativos a las tecnologías digitales, resaltando nuestra relación que tenemos con las máquinas, despertando nuestro potencial como agentes creativos.
-+ Aborda temáticas como:  robótica gestual interactiva; el potencial táctico de la fabricación digital personal; nuevas estéticas de la interacción no verbal; y la visualización de la información como modo de indagación crítica.
++ Aborda temáticas como:
+  - Robótica gestual interactiva
+  - El potencial táctico de la fabricación digital personal
+  - Nuevas estéticas de la interacción no verbal
+  - Visualización de la información como modo de indagación crítica.
 + Nombrado dentro de los 50 diseñadores que dan forma al futuro.
 + Levin escribe: «Me interesa el medio de respuesta y las condiciones que permiten a las personas experimentar una retroalimentación creativa con sistemas reactivos. Me atrae el potencial crítico y revelador de la visualización, ya sea aplicada a un solo participante o al mundo de datos que habitamos. Me dedico al uso de la computación generativa para descifrar principios, tanto nuevos como atemporales, de la forma expresiva. Y me fascina cómo la abstracción puede conectarnos con una realidad más allá del lenguaje, y las maneras en que nuestros gestos y huellas, así abstraídos, pueden revelar las improntas únicas de nuestro espíritu».
 + Es capaz de hacer visibles nuestros medios de interacción con el otro, explorando la intersección de la comunicación no verbal y la interactividad.
@@ -158,7 +162,7 @@ https://www.medialab-matadero.es/personal/golan-levin
 ## RAP [Robotic Action Painter]
 + Creado en 2006.
 +  Es un robot autónomo capaz de producir pinturas y dibujos por sí mismo, tomando decisiones durante el proceso creativo. Contiene nuevas habilidades que Moura no había implementado en sus obras anteriores tales como: determinar la longitud y forma de cada trazo, la capacidad de decidir, de forma no lineal, el momento de parar y la habilidad de firmar.
-+  Su funcionamiento es a través bolígrafos de seis colores, en el cual los sensores RGB están dispuestos en una cuadrícula de 3×3, la cual permite detectar patrones locales y no solo colores.
++  Su funcionamiento es a través de bolígrafos de seis colores, en el cual los sensores RGB están dispuestos en una cuadrícula de 3×3, la cual permite detectar patrones locales y no solo colores.
 +  Dentro de su sistema es posible visualizar el uso de un Servo Motor (no se encuentra detallado en ninguna documentación), pero es muy probable que haga uso de este, deduciendo el tipo de movimientos que realiza el robot, permitiendo controlar dentro de este la posición, velocidad, dirección y su precisión en los movimientos. Cumpliendo así un rol fundamental, no solamente como función mecánica, si no que también un rol conceptual dentro de la obra. En donde sin este sistema de movimiento controlado el robot no sería capaz de poder representar y plasmar su comportamiento creativo.
 
 ![titulo](./imagenes/rap.png)
