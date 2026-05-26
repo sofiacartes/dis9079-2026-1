@@ -26,14 +26,14 @@ A la Raspberry le sumamos una pantalla OLED de 128x64 px para poder ver los dato
 - Cable USB a Micro-USB
 - Cable USB a tipo C
 - Cables dupont
-- Potenciómetro 10K
+- Potenciómetro 100K
 - Pantalla OLED 128x84 px
 - Botón pulsador
 - Servomotor
 
 ## Sensor usado
 
-- Potenciómetro (10K): Resistencia variable que cambia su valor interno cuando giramos la perilla.
+- Potenciómetro (100K): Resistencia variable que cambia su valor interno cuando giramos la perilla.
   - Lo utilizamos para captar la posición en la que queremos mover el servomotor, envía los  datos mediante la Raspberry hacia Adafruit IO.
 
 ## Actuador usado
