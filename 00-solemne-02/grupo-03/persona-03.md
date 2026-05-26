@@ -27,7 +27,7 @@ al ser un sensor digital, su visualización es bastante directa:
 
 | atado | causa | solución |
 |---|---|---|
-| muchas lecturas por una sola presióm | rebote eléctrico | debounce por software o hardware |
+| muchas lecturas por una sola presión | rebote eléctrico | debounce por software o hardware |
 | siempre lee el mismo valor | sin resistencia pull-up/down | activar `Pull.UP` en el código |
 | no detectar ninguna pulsación | posible cable suelto o pin mal configurado | revisar conexión y dirección del pin |
 
