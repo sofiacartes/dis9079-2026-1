@@ -28,7 +28,9 @@ Al mantener presionado el botón se mantiene encendido el LED y al soltarlo se a
 Observamos las demostraciones de nuestros compañeros y como funcionaron sus solemnes y dispositivos
 
 -Wokwi permite la simulación sin la necesidad de tener los componentes físicos. 
+
 -Relé genera más potencia 
+
 -Tinkercad simulador 
 
 ### Bibliografía
