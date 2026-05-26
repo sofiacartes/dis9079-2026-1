@@ -109,19 +109,17 @@ Para solucionar estos problemas se utilizan filtros de información, mantenimien
 
 ## Proyecto o empresa que utiliza sensores
 
-Una de las empresas más conocidas por el uso avanzado de sensores es Tesla. Sus vehículos eléctricos incorporan múltiples sensores que permiten desarrollar sistemas de conducción autónoma e inteligencia artificial aplicada al transporte.
+# Agricultura Inteligente (Smart Farming)
 
-Los automóviles Tesla utilizan cámaras, radares, sensores ultrasónicos y sistemas computacionales que recopilan información constantemente sobre el entorno del vehículo. Estos sensores permiten detectar peatones, medir distancias, reconocer señales de tránsito, identificar obstáculos y mantener el automóvil dentro de la carretera.
+Uno de los proyectos más utilizados actualmente y que realmente funciona en la vida cotidiana es la agricultura inteligente o Smart Farming. Este sistema utiliza sensores conectados inalámbricamente para monitorear cultivos y mejorar la producción agrícola.
 
-El sistema Autopilot de Tesla combina todos estos sensores con algoritmos de inteligencia artificial para ayudar al conductor o incluso controlar parcialmente el vehículo de manera automática. El automóvil analiza millones de datos por segundo para tomar decisiones en tiempo real.
+En este tipo de proyectos se utilizan sensores de humedad, temperatura, luz y calidad del suelo. Los sensores recopilan información constantemente sobre las condiciones del terreno y la envían a plataformas digitales o aplicaciones móviles. Gracias a esto, los agricultores pueden saber exactamente cuándo regar, fertilizar o proteger los cultivos.
 
-Además, Tesla recopila información de sus vehículos para mejorar continuamente sus sistemas mediante aprendizaje automático. Gracias a esto, la empresa ha logrado desarrollar una de las tecnologías de conducción autónoma más avanzadas del mundo.
+Por ejemplo, los sensores de humedad detectan cuánta agua tiene la tierra. Si el suelo está demasiado seco, el sistema puede enviar una alerta o activar automáticamente un sistema de riego. Esto permite ahorrar agua, mejorar el crecimiento de las plantas y reducir pérdidas agrícolas.
 
-El uso de sensores en Tesla demuestra cómo la interacción inalámbrica y la automatización pueden transformar el transporte moderno, mejorando la seguridad, la eficiencia energética y la experiencia de conducción.
+Además, algunos sistemas usan sensores climáticos que predicen cambios de temperatura o lluvias, ayudando a tomar decisiones más precisas. La información recopilada también puede visualizarse mediante gráficos y estadísticas en tiempo real.
 
-<img width="996" height="621" alt="sensor" src="https://github.com/user-attachments/assets/5305f32e-0696-41f0-88be-acd439dda282" />
-
-<img width="1127" height="634" alt="sensor1" src="https://github.com/user-attachments/assets/69014025-c005-475d-a9d0-c87708015fe6" />
+Este proyecto es muy importante porque demuestra cómo los sensores pueden utilizarse de forma real y eficiente para resolver problemas ambientales y productivos. Actualmente empresas agrícolas y universidades utilizan estos sistemas en distintos países para optimizar recursos y aumentar la producción de alimentos.
 
 # Actuador
 

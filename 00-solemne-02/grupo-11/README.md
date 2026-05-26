@@ -21,7 +21,7 @@ El Arduino se conecta a la misma red WiFi y al mismo feed de Adafruit IO. Cada v
 ## Materiales usados
 * Raspberry Pi pico 2
 * Arduino R4
-* el LEDBotón pulsador (push button 4 patas)
+* Botón pulsador (push button 4 patas)
 * LED (cualquier color)
 * Resistencia 220Ω1Protege el LED de sobrecorriente
 * Protoboard (placa de pruebas)
@@ -58,6 +58,17 @@ No necesitás resistencia externa porque el código usa Pin.PULL_UP, que activa 
 
 durante la clase se probo con enviar datos al adafruit
 <img width="1882" height="861" alt="io adafruit" src="https://github.com/user-attachments/assets/a86efa48-aaeb-46b4-947a-0579609b8873" />
+
+## Resultado bueno funcional 
+
+
+https://github.com/user-attachments/assets/c9e92d02-9f83-4edf-9f51-975c2e9b597a
+
+
+
+https://github.com/user-attachments/assets/f96f3a10-2545-4a07-9acf-d99c48e91bf3
+
+
 
 ## Actuador usado
 
