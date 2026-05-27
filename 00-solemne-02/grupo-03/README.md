@@ -19,9 +19,9 @@
 | Pantalla LCD OLED 1.3 | Display de salida visual; muestra información del sistema como datos, estados o mensajes |
 
 ## Sensor usado  
-```
+
 pulsador táctil
-``` 
+
 Para el sensor decidimos utilizar un botón pulsador conectado a nuestra Raspberry Pi, ya que nos permitía transformar una acción física muy simple en el envío de un mensaje a la nube. En este caso, el botón funciona como el punto de inicio del sistema: al presionarlo, la Raspberry detecta la acción y envía un mensaje al feed de Adafruit IO.
 
 El sistema está pensado como una secuencia de cuatro mensajes. Cada vez que se presiona el botón, se envía una parte distinta: primero “Sonríe por mí”, luego “amigo”, después “yo sonrío por ti” y finalmente “...”. Después de la cuarta pulsación, la secuencia vuelve a empezar desde el primer mensaje.
@@ -29,9 +29,9 @@ El sistema está pensado como una secuencia de cuatro mensajes. Cada vez que se 
 Durante las pruebas nos dimos cuenta de que la forma de presionar el botón también influía en el funcionamiento. No bastaba con tocarlo muy rápido, porque a veces costaba que se enviara correctamente el siguiente mensaje. En nuestro caso, funcionaba mejor mantenerlo presionado hasta que el mensaje se enviara y luego soltarlo, para que el sistema pudiera reconocer bien una pulsación antes de pasar a la siguiente. Esto nos ayudó a entender que la interacción con el sensor no era solo técnica, sino también corporal. El botón necesitaba un gesto claro: presionar, esperar y soltar. Así, cada pulsación se volvía una pequeña acción de comunicación, donde el contacto físico activaba el envío de una parte del mensaje. 
 
 ## Actuador usado 
-``` 
+
 Display OLED de 128 x 64 Pixeles Controlable por I2C
-```
+
 
 Para el actuador utilizamos una pantalla OLED conectada a nuestro Arduino, permitiendo que se proyectaran visualmente los cuatro mensajes enviados desde la Raspberry. En este caso, la pantalla funcionaba como la salida del sistema: recibía la información desde Adafruit IO y la transformaba en texto visible.
 
@@ -178,7 +178,7 @@ while True:
 
 ## **<ins>Configuración del botón</ins>** 
 
-```
+```cpp
 boton = digitalio.DigitalInOut(board.GP0)
 boton.direction = digitalio.Direction.INPUT
 boton.pull = digitalio.Pull.UP
@@ -194,7 +194,7 @@ Eso significa:
  
 **<ins>Estado anterior y contador</ins>** 
  
-```
+```cpp
 estado_anterior = True
 contador_boton = 0
 ```
@@ -203,19 +203,19 @@ Esto sirve para detectar el momento exacto en que se presiona, no para estar ley
 contador_boton sirve para saber qué mensaje toca enviar. 
 
 **<ins>Loop principal</ins>**  
-```
+```cpp
 while True:
 ``` 
 Esto significa que el programa se repite para siempre.
-```
+```cpp
 mqtt.loop()
 ``` 
 Esto mantiene viva la conexión con Adafruit IO
-```
+```cpp
 estado_actual = boton.value
 ```
 **<ins>Detección de presión</ins>**  
-```
+```cpp
 if estado_anterior == True and estado_actual == False:
 ```
 > “Si antes el botón no estaba presionado y ahora sí está presionado, entonces acaba de ocurrir una pulsación”.
@@ -237,13 +237,13 @@ el pull-up evita lecturas falsas y deja claro cuándo el botón está suelto y c
 **<ins>Elegir y enviar mensaje</ins>**   
 
 Para que el botón enviara mensajes distintos, usamos un contador de pulsaciones. Este contador parte desde cero y va aumentando cada vez que el botón es presionado. En el código, los mensajes están guardados dentro de una lista, y cada posición de esa lista corresponde a un mensaje diferente.   
-```
+```cpp
 estado_anterior = True
 contador_boton = 0
 ```
 Como Python empieza a contar desde cero, el primer mensaje está en la posición 0, el segundo en la posición 1, el tercero en la posición 2 y el cuarto en la posición 3. Entonces, cuando se presiona el botón, el código revisa en qué número va el contador y envía el mensaje correspondiente. 
  
-```
+```cpp
 mensaje = mensajes[contador_boton] 
 ```
 Aquí se elige el mensaje que corresponde según el contador.
@@ -252,34 +252,34 @@ Si contador_boton vale 0, manda el primer mensaje.
 Si vale 1, manda el segundo.
 Si vale 2, manda el tercero.   
   
-```
+```cpp
 mqtt.publish(FEED_BOTON, mensaje)
 ```
 Esta línea envía el mensaje a Adafruit IO  
 
 **<ins>Avanzar al siguiente mensaje</ins>**  
-```
+```cpp
 contador_boton = contador_boton + 1 
 ```
 Después de enviar un mensaje el contador sube en 1 para que la próxima pulsación mande el siguiente 
-```
+```cpp
 if contador_boton >= 4:
     contador_boton = 0
 ```
 cuando el contador llega a 4, vuelve a 0, eso significa que vuelve a empezar la secuencia. 
 
 si tenemos más de 4 mensajes el codigo podría cambiar para no tener que cambiar manualmente el número: 
-```
+```cpp
 if contador_boton >= len(mensajes):
     contador_boton = 0
 ```
 **<ins>Anti-rebote</ins>**   
-```
+```cpp
 time.sleep(0.3)
 ```
 Esta pausa evita que una sola presión se lea muchas veces por el rebote del botón 
 
-```
+```cpp
 while boton.value == False:
     mqtt.loop()
     time.sleep(0.01)
@@ -288,7 +288,7 @@ Espera a que soltemos el botón antes de permitir otra lectura
 > “Ya mandé el mensaje. Ahora no voy a mandar otro hasta que el botón se suelte”.
 
 **<ins>Actualizar estado anterior</ins>** 
-```
+```cpp
 estado_anterior = boton.value
 ```
 Guarda el estado actual del botón 
@@ -433,7 +433,7 @@ void loop() {
 }
 ```
 ## **<ins>Configuración de la pantalla OLED</ins>** 
-```
+```cpp
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
 #define OLED_RESET -1 
@@ -441,13 +441,13 @@ void loop() {
 Aquí se define el tamaño de la pantalla 
 
 **<ins>Cómo lee el mensaje</ins>**  
-```
+```cpp
 AdafruitIO_Feed *botonFeed = io.feed("prueba05");
 ```
 Eso significa: “voy a estar atento al feed llamado prueba05”.
 Ese feed es el mismo donde la Raspberry está publicando los mensajes.  
 
-```
+```cpp
 botonFeed->onMessage(handleMessage);
 ```
 > “Cada vez que llegue un mensaje nuevo al feed prueba05, ejecuta la función handleMessage”.
@@ -455,7 +455,7 @@ botonFeed->onMessage(handleMessage);
 De esta forma nuestro arduino queda suscrito al feed, esperando que llegue algo.
 
  **<ins>La función que recibe el mensaje es:</ins>**  
-```
+```cpp
 void handleMessage(AdafruitIO_Data *data) {
   String mensaje = data->toString();
 
@@ -468,7 +468,7 @@ void handleMessage(AdafruitIO_Data *data) {
 
 Cuando llega un dato desde Adafruit IO, ese dato entra como **data** 
 Pero **data** viene en un formato propio de Adafruit, no como texto directo. Por eso se usa esta línea
-```
+```cpp
 String mensaje = data->toString();
 ```
 Eso convierte el dato recibido en texto normal, para que Arduino pueda mostrarlo o imprimirlo. 
