@@ -11,8 +11,9 @@ Corregir y probar las solemnes en clases frente a todos
 
 Imagenes no tienen créditos específicos, siempre incluirlos, aunque sean de factura propia.
 
-
 ## Correcciones
+
+Carpetas y nombres de imagenes arregladas :,)
 
 Ya están actualizados en la sesión-10 y en la solemne-02 persona-01 :)
 
