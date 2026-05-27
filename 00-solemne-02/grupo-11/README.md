@@ -94,7 +94,7 @@ Respecto al código utilizado para enviar, tuvimos que realizarle cambios para a
 
 ## Código usado para recibir
 
-
+El código utilizado estaba correcto, aunque durante un momento intentamos que los mensajes fueran "1" y "0"
 
 ## Imágenes del proyecto
 <img width="900" height="1600" alt="WhatsApp Image 2026-05-21 at 19 02 01" src="https://github.com/user-attachments/assets/fc3011c3-77e6-49eb-8ea7-3f1cd5e51e51" />
