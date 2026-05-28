@@ -41,7 +41,7 @@ Es como una “consola” desde donde puedes:
 * usar herramientas de desarrollo
 
 ## MQTT
-Protocolo de comunicación  utilizado principalmente en proyectos de IoT y automatización. Su funcionamiento se basa en el envío y recepción de mensajes entre dispositivos mediante un sistem
+Protocolo de comunicación  utilizado principalmente en proyectos de IoT y automatización. Su funcionamiento se basa en el envío y recepción de mensajes entre dispositivos mediante un sistema.
 
 ## Bibliografía
 https://support.apple.com/es-us/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac 
