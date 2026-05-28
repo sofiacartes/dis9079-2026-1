@@ -31,11 +31,11 @@ El proyecto demuestra cómo un dato de luz simple puede transformarse en interac
 
 ![referente](imagenes/referentemarco.jpg)  
 
-Brianza, M. (2018). Distributed light installation – Minimal social network. https://www.marcobrianza.it/wemakecolors-ii/
+Brianza, M. (2018). _Distributed light installation – Minimal social network._ https://www.marcobrianza.it/wemakecolors-ii/
 
 ![referente](imagenes/referentemarco1.jpg)
 
-Brianza, M. (2018). Distributed light installation – Minimal social network. https://www.marcobrianza.it/wemakecolors-ii/
+Brianza, M. (2018). _Distributed light installation – Minimal social network._ https://www.marcobrianza.it/wemakecolors-ii/
 
 ## Sensor PIR -  utilizado solemne
 Su función es detectar movimiento a partir de las variaciones presentes en el entorno, especialmente el calor emitido por el cuerpo humano. El sensor identifica estos cambios térmicos mediante elementos piroeléctricos y los convierte en señales eléctricas que luego pueden ser procesadas e interpretadas por un microcontrolador.
@@ -73,13 +73,22 @@ La interacción ocurre en tiempo real ya que el espectador modifica el comportam
 
 ![proyecto](imagenes/referentesurface.png)
 
-Picaroon. (2018). SURFACE X. https://www.hackster.io/Picaroon/surface-x-811e8c 
+Picaroon. (2018). _SURFACE X._ https://www.hackster.io/Picaroon/surface-x-811e8c 
 
 ![proyecto](imagenes/referentesurface1.png)
 
-Picaroon. (2018). PIR Signal Inverter. https://www.hackster.io/Picaroon/surface-x-811e8c 
+Picaroon. (2018). _PIR Signal Inverter._ https://www.hackster.io/Picaroon/surface-x-811e8c 
+## Actuador
+Un actuador es un componente electrónico que transforma una señal eléctrica en una acción física o visible. A diferencia de los sensores, que reciben información del entorno, los actuadores permiten que el sistema responda o interactúe con ese entorno.
 
-## Pantalla OLED 
+Algunos generan:
+* Movimiento
+* Luz
+* Sonido
+* Vibración
+* Calor
+  
+## Pantalla OLED - actuador utilizado
 #### Funcionamiento básico
 * El microcontrolador envía información a la pantalla.
 * La pantalla interpreta los datos.
@@ -127,7 +136,9 @@ Lo interesante del proyecto es que transforma varias pantallas pequeñas en una 
 Circoled no utiliza las pantallas OLED únicamente como monitores, sino como parte central de una pieza interactiva. Las ocho pantallas organizadas en forma circular crean un cilindro luminoso que transforma la visualización de datos en una experiencia espacial. De esta manera, la pantalla deja de ser solo un soporte técnico y se convierte en un objeto visual performático y narrativo.
 
 ![referente](imagenes/referentecicoled.png)
- https://www.pcbway.com/project/shareproject/Circoled___Eight_tiny_OLED_displays_arranged_in_a_circle.html
+
+König, M. (2021). _Circoled - Eight tiny OLED displays arranged in a circle._
+https://www.pcbway.com/project/shareproject/Circoled___Eight_tiny_OLED_displays_arranged_in_a_circle.html
 
 
 ## Bibliografía
