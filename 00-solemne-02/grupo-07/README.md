@@ -61,6 +61,19 @@ El siguiente desafío fue agregar los demás frames, ya que teníamos que conver
 
 Finalmente, conseguimos que el GIF funcionara correctamente y se reprodujera completo en la pantalla.
 
+### Resultado final
+A pesar de los errores y contratiempos que tuvimos durante el desarrollo, finalmente logramos obtener una animación funcional para el proyecto.
+Después de varias pruebas, decidimos simplificar la idea inicial y trabajar solo con un personaje, agregándole más frames para mejorar la fluidez del movimiento y lograr un resultado más estable en la pantalla.
+El resultado final fue una animación de un alien, esta se proyecta en la pantalla OLED que es accionada por un botón y que está conectada a su vez al Arduino UNO R4 Wifi que recibe la señal de Adafruit IO. Esa señal se manda gracias a un sensor PIR accionado por un botón, que al detectar el movimiento, la Raspberry Pi Pico 2 W manda la señal a la nube de Adafruit IO.
+
+![resultado](imagenes/solemne3.gif)
+
+Resultado de la animación al momento de que el sensor PIR siente movimiento.
+
+![resultado](imagenes/solemne3.jpeg)
+
+Resultado de la animación.
+
 ### Pruebas de animación
 
 ![pruebas](imagenes/pruebas1.gif)
