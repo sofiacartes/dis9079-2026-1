@@ -8,7 +8,7 @@ Anays Cornejo - [Anaysval](https://github.com/Anaysval)
 
 ![foto](./imagenes/1ola.jpg) 
 
-Foto por: https://bigamart.com/product/aoicrie-5pcs-hc-sr501-pir-infrared-sensor-ir-human-body-motion-module-for-arduino-for-raspberry-pi-green/
+Foto por: [bigamart.com](https://bigamart.com/product/aoicrie-5pcs-hc-sr501-pir-infrared-sensor-ir-human-body-motion-module-for-arduino-for-raspberry-pi-green/)
 
 ### ¿Qué es un sensor PIR?
 
@@ -74,11 +74,11 @@ Los más frecuentes son:
 
 ![foto](./imagenes/1obra.jpg)
 
-Made to Measure-Foto por: https://process.studio/works/made-to-measure/
+Made to Measure - Foto por: [process.studio](https://process.studio/works/made-to-measure/)
 
 La instalación Made to Measure del estudio Process Studio es una obra de arte interactivo donde el espacio responde a la presencia del público mediante sensores de movimiento instalados en el techo. Según la documentación oficial del proyecto, la obra utiliza 15 sensores PIR para detectar la presencia y el desplazamiento de los visitantes dentro de la sala.
 
-“Al acercarse a los objetos expuestos o al caminar por la sala, el visitante activaba 15 sensores de movimiento montados en el techo, activando bucles en 8 altavoces diferentes y el parpadeo o conmutación de 5 tubos de neón. Dependiendo de las acciones de los visitantes, surgieron diferentes paisajes sonoros y situaciones de iluminación.” (Process Studio, n.d.) 
+“Al acercarse a los objetos expuestos o al caminar por la sala, el visitante activaba 15 sensores de movimiento montados en el techo, activando bucles en 8 altavoces diferentes y el parpadeo o conmutación de 5 tubos de neón. Dependiendo de las acciones de los visitantes, surgieron diferentes paisajes sonoros y situaciones de iluminación.” (Process Studio, n.d.).
 
 El sensor PIR es un dispositivo que detecta movimiento a partir de cambios en la radiación infrarroja emitida por el cuerpo humano. Su función principal es identificar la presencia de personas en un espacio sin contacto directo, lo que lo hace ideal para sistemas de iluminación automática, seguridad y entornos interactivos. En este caso, los sensores permiten que la instalación reaccione al público en tiempo real, activando luz y sonido según su movimiento.
 
@@ -97,7 +97,7 @@ No encontré más información sobre la instalación Made to Measure del estudio
 
 ![foto](./imagenes/2ola.jpg) 
 
-Foto por: https://tvc.mx/products/10650#69786&gid=1&pid=3
+Foto por: [mx/products](https://tvc.mx/products/10650#69786&gid=1&pid=3)
 
 ### ¿Qué es un pistón electromecánico?
 
@@ -113,11 +113,11 @@ El actuador electromecánico funciona cuando recibe una señal eléctrica que ac
 
 Se utiliza principalmente en:
 
-- robótica
-- automatización de sistemas
-- mecanismos de elevación
-- movimiento controlado de objetos
--sistemas mecánicos interactivos
+- Robótica
+- Automatización de sistemas
+- Mecanismos de elevación
+- Movimiento controlado de objetos
+- Sistemas mecánicos interactivos
 
 ### Filtrado de información
 
@@ -125,26 +125,26 @@ El actuador puede presentar errores o fallas si no se controla correctamente, po
 
 Los principales problemas que afectan su rendimiento son:
 
-- sobrecarga del peso que debe mover
-- desgaste mecánico por uso continuo
-- errores de calibración del movimiento
-- variación en la potencia eléctrica
+- Sobrecarga del peso que debe mover
+- Desgaste mecánico por uso continuo
+- Errores de calibración del movimiento
+- Variación en la potencia eléctrica
 
 Para mejorar su funcionamiento se utilizan:
 
-- control preciso de la señal eléctrica
-- calibración del recorrido del pistón
-- regulación de la carga mecánica
-- mantenimiento periódico
+- Control preciso de la señal eléctrica
+- Calibración del recorrido del pistón
+- Regulación de la carga mecánica
+- Mantenimiento periódico
 - Visualización de datos
 
 Los actuadores no muestran datos directamente, pero convierten información digital en movimiento físico.
 
 Esto se realiza mediante:
 
-- señales eléctricas enviadas desde un sistema de control
-- programación de movimientos específicos
-- conversión de datos en acción mecánica (ej: subir, bajar o mantener posición)
+- Señales eléctricas enviadas desde un sistema de control
+- Programación de movimientos específicos
+- Conversión de datos en acción mecánica (ej: subir, bajar o mantener posición)
 
 ### Problemas comunes
 
@@ -152,11 +152,11 @@ El actuador electromecánico puede presentar distintos problemas durante su uso.
 
 Los más frecuentes son:
 
-- desgaste de engranajes internos
-- sobrecalentamiento del motor
-- pérdida de precisión con el tiempo
-- ruido mecánico durante el funcionamiento
-- fallos si recibe cargas mayores a las recomendadas
+- Desgaste de engranajes internos
+- Sobrecalentamiento del motor
+- Pérdida de precisión con el tiempo
+- Ruido mecánico durante el funcionamiento
+- Fallos si recibe cargas mayores a las recomendadas
 
 ### Información importante adicional
 
@@ -171,17 +171,17 @@ Los más frecuentes son:
 
 Ventajas:
 
-- control preciso del movimiento
-- fácil integración con sistemas electrónicos
-- bajo mantenimiento comparado con sistemas hidráulicos
-- repetición de movimientos sin fatiga humana
+- Control preciso del movimiento
+- Fácil integración con sistemas electrónicos
+- Bajo mantenimiento comparado con sistemas hidráulicos
+- Repetición de movimientos sin fatiga humana
 
 Desventajas:
 
-- fuerza limitada según el modelo
-- puede sobrecalentarse con uso continuo
-- depende totalmente de energía eléctrica
--desgaste mecánico interno con el tiempo
+- Fuerza limitada según el modelo
+- Puede sobrecalentarse con uso continuo
+- Depende totalmente de energía eléctrica
+- Desgaste mecánico interno con el tiempo
 
 ### Obra
 
@@ -189,13 +189,13 @@ Desventajas:
 
 ![foto](./imagenes/giff.gif) 
 
-Wavefunction-Video/gif por: https://lozano-hemmer.com/wavefunction.php
+Wavefunction - Video/gif por: [wavefunction](https://lozano-hemmer.com/wavefunction.php)
 
 ![foto](./imagenes/2obra.jpg) 
 
-Wavefunction-Foto por: https://lozano-hemmer.com/wavefunction.php
+Wavefunction - Foto por: [wavefunction](https://lozano-hemmer.com/wavefunction.php)
 
-Rafael Lozano-Hemmer es un artista contemporáneo mexicano-canadiense nacido en 1967 en Ciudad de México. Su trabajo se enfoca en la creación de instalaciones interactivas que combinan arte, tecnología y participación del público. Sus obras utilizan sistemas computacionales, sensores y mecanismos automatizados para generar experiencias donde el espectador es parte activa de la obra 
+Rafael Lozano-Hemmer es un artista contemporáneo mexicano-canadiense nacido en 1967 en Ciudad de México. Su trabajo se enfoca en la creación de instalaciones interactivas que combinan arte, tecnología y participación del público. Sus obras utilizan sistemas computacionales, sensores y mecanismos automatizados para generar experiencias donde el espectador es parte activa de la obra.
 
 Su enfoque artístico se basa en la idea de la “arquitectura relacional”, donde el espacio expositivo deja de ser estático y responde a la presencia de las personas. Esto permite que el comportamiento del público influya directamente en el funcionamiento de la instalación, transformando la obra en un sistema dinámico en tiempo real.
 
